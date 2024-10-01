@@ -1,5 +1,8 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import LeftNav from "@/components/nav/nav";
+import HamburgerMenu from "@/components/HamburgerMenu.js/HamburgerMenu";
+import NavBarMobile from "@/components/NavBarMobile/NavBarMobile";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -21,8 +24,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased transition-colors duration-300 bg-zinc-300 dark:bg-zinc-900`}
       >
+        <LeftNav />
+        <NavBarMobile/>
         {children}
       </body>
     </html>
