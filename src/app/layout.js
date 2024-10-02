@@ -3,6 +3,7 @@ import "./globals.css";
 import LeftNav from "@/components/nav/nav";
 import HamburgerMenu from "@/components/HamburgerMenu.js/HamburgerMenu";
 import NavBarMobile from "@/components/NavBarMobile/NavBarMobile";
+import Banner from "@/components/Banner/Banner";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -26,9 +27,22 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased transition-colors duration-300 bg-zinc-300 dark:bg-zinc-900`}
       >
-        <LeftNav />
-        <NavBarMobile/>
-        {children}
+
+        <div className='flex flex-col h-screen lg:hidden'>
+         <NavBarMobile />
+         {children}
+        </div>
+
+        <div className="flex-row hidden lg:flex">
+          <LeftNav />
+          <NavBarMobile />
+          <div className="h-fit w-full flex flex-col">
+            <div className="h-fit w-full flex justify-center p-10 border-b-2 border-black dark:border-gray-600 bg-zinc-400 dark:bg-zinc-800 transition-colors duration-300">
+              <Banner />
+            </div>
+            {children}
+          </div>
+        </div>
       </body>
     </html>
   );

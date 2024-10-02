@@ -42,9 +42,9 @@ export default function HamburgerMenu() {
 
   const toggleMenu = () => {
     if (isOpen === true) {
-        setIsOpen(false)
+      setIsOpen(false);
     } else {
-        setIsOpen(true)
+      setIsOpen(true);
     }
   };
 
@@ -62,7 +62,7 @@ export default function HamburgerMenu() {
   }, []);
 
   return (
-    <div className="relative lg:hidden pr-5 z-50">
+    <div className="relative lg:hidden z-50">
       <button
         onClick={toggleMenu}
         aria-expanded={isOpen}
@@ -94,15 +94,16 @@ export default function HamburgerMenu() {
       >
         <nav className="flex flex-col p-4 h-full bg-gradient-to-b from-amber-400 to-amber-600 dark:bg-gradient-to-b dark:from-zinc-600 dark:to-zinc-800">
           <div className="h-full pl-4 flex flex-col justify-around">
-            <img src='/smalllogonav.png' className='w-36 h-36 self-center pr-4'/> 
+            <img
+              src="/smalllogonav.png"
+              className="w-36 h-36 self-center pr-4"
+            />
             <div className="border-t-2 border-black dark:border-gray-600 py-2 h-full">
-              <Link href="/about">
-                <h1
-                  className={`${cutive.className} text-3xl font-semibold text-black dark:text-gray-300 transition-colors duration-300`}
-                >
-                  About Me
-                </h1>
-              </Link>
+              <h1
+                className={`${garamond.className} text-3xl font-semibold text-black dark:text-gray-300 transition-colors duration-300`}
+              >
+                About Me
+              </h1>
               <Link href="/development">
                 <p
                   className={`${cutive.className} text-2xl text-black dark:text-gray-300 dark:hover:text-violet-400 transition-colors duration-300 hover:cursor-pointer`}

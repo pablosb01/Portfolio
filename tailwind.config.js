@@ -8,6 +8,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        garamond : ['EB Garamond', 'serif'],
+        cutive: ['Cutive Mono', 'monospace']
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
