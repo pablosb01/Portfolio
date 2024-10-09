@@ -67,7 +67,7 @@ export default function HamburgerMenu() {
         onClick={toggleMenu}
         aria-expanded={isOpen}
         aria-controls="hamburger-menu"
-        className="p-2 text-white bg-gradient-to-b from-amber-400 to-amber-600 rounded-md focus:outline-none z-50"
+        className="p-2 text-white bg-gradient-to-b from-red-400 to-red-600 dark:bg-gradient-to-b dark:from-indigo-400 dark:to-indigo-600 rounded-md focus:outline-none z-50"
       >
         <svg
           className="w-6 h-6"
@@ -92,87 +92,96 @@ export default function HamburgerMenu() {
           isOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-300 ease-in-out`}
       >
-        <nav className="flex flex-col p-4 h-full bg-gradient-to-b from-amber-400 to-amber-600 dark:bg-gradient-to-b dark:from-zinc-600 dark:to-zinc-800">
+        <nav className="flex flex-col p-4 h-full bg-gradient-to-b from-red-300 to-red-600 dark:bg-gradient-to-t dark:from-zinc-800 dark:to-indigo-800">
           <div className="h-full pl-4 flex flex-col justify-around">
             <img
-              src="/smalllogonav.png"
+              src="/yoliteral.png"
               className="w-36 h-36 self-center pr-4"
             />
             <div className="border-t-2 border-black dark:border-gray-600 py-2 h-full">
               <h1
-                className={`${garamond.className} text-3xl font-semibold text-black dark:text-gray-300 transition-colors duration-300`}
+                className={`font-garamond text-3xl font-semibold text-black dark:text-gray-300 transition-colors duration-300`}
               >
                 About Me
               </h1>
-              <Link href="/development">
+              <Link href="/dev">
                 <p
-                  className={`${cutive.className} text-2xl text-black dark:text-gray-300 dark:hover:text-violet-400 transition-colors duration-300 hover:cursor-pointer`}
+                  className={`font-cutive text-2xl text-black dark:text-gray-300 dark:hover:text-violet-400 transition-colors duration-300 hover:cursor-pointer`}
                 >
                   Development
                 </p>
               </Link>
+              <Link href="/contact">
+                <p
+                  className={`font-cutive text-2xl text-black dark:text-gray-300 dark:hover:text-violet-400 transition-colors duration-300 hover:cursor-pointer`}
+                >
+                  Contact Me
+                </p>
+              </Link>
             </div>
             <div className="border-t-2 border-black dark:border-gray-600 py-2 h-full">
-              <Link href="/projects">
+              <div>
                 <h1
-                  className={`${garamond.className} text-3xl font-semibold text-black dark:text-gray-300 transition-colors duration-300`}
+                  className={`font-garamond text-3xl font-semibold text-black dark:text-gray-300 transition-colors duration-300`}
                 >
                   Projects
                 </h1>
-              </Link>
-              <Link href="/projects/nintendo-clone">
+              </div>
+              <Link href="/nintendo">
                 <p
-                  className={`${cutive.className} text-2xl text-black dark:text-gray-300 dark:hover:text-violet-400 transition-colors duration-300 hover:cursor-pointer`}
+                  className={`font-cutive text-2xl text-black dark:text-gray-300 dark:hover:text-violet-400 transition-colors duration-300 hover:cursor-pointer`}
                 >
                   Nintendo Clone
                 </p>
               </Link>
-              <Link href="/projects/score-tracker">
+              <Link href="/score">
                 <p
-                  className={`${cutive.className} text-2xl text-black dark:text-gray-300 dark:hover:text-violet-400 transition-colors duration-300 hover:cursor-pointer`}
+                  className={`font-cutive text-2xl text-black dark:text-gray-300 dark:hover:text-violet-400 transition-colors duration-300 hover:cursor-pointer`}
                 >
                   SCORE Tracker
                 </p>
               </Link>
-              <Link href="/projects/aqua-reloaded">
+              <Link href="/aqs">
                 <p
-                  className={`${cutive.className} text-2xl text-black dark:text-gray-300 dark:hover:text-violet-400 transition-colors duration-300 hover:cursor-pointer`}
+                  className={`font-cutive text-2xl text-black dark:text-gray-300 dark:hover:text-violet-400 transition-colors duration-300 hover:cursor-pointer`}
                 >
                   AquaReloaded
                 </p>
               </Link>
             </div>
             <div className="border-t-2 border-black dark:border-gray-600 py-2 h-full">
-              <Link href="/social-media">
+              <div>
                 <h1
-                  className={`${garamond.className} text-3xl font-semibold text-black dark:text-gray-300 transition-colors duration-300`}
+                  className={`font-garamond text-3xl font-semibold text-black dark:text-gray-300 transition-colors duration-300`}
                 >
                   Social Media
                 </h1>
-              </Link>
+              </div>
               <Link href="https://www.linkedin.com">
                 <p
-                  className={`${cutive.className} text-2xl text-black dark:text-gray-300 dark:hover:text-violet-400 transition-colors duration-300 hover:cursor-pointer`}
+                  className={`font-cutive text-2xl text-black dark:text-gray-300 dark:hover:text-violet-400 transition-colors duration-300 hover:cursor-pointer`}
                 >
                   LinkedIn
                 </p>
               </Link>
               <Link href="https://github.com">
                 <p
-                  className={`${cutive.className} text-2xl text-black dark:text-gray-300 dark:hover:text-violet-400 transition-colors duration-300 hover:cursor-pointer`}
+                  className={`font-cutive text-2xl text-black dark:text-gray-300 dark:hover:text-violet-400 transition-colors duration-300 hover:cursor-pointer`}
                 >
                   GitHub
                 </p>
               </Link>
               <Link href="https://twitter.com">
                 <p
-                  className={`${cutive.className} text-2xl text-black dark:text-gray-300 dark:hover:text-violet-400 transition-colors duration-300 hover:cursor-pointer`}
+                  className={`font-cutive text-2xl text-black dark:text-gray-300 dark:hover:text-violet-400 transition-colors duration-300 hover:cursor-pointer`}
                 >
                   Twitter
                 </p>
               </Link>
             </div>
-            <ThemeToggle toggleTheme={toggleTheme} theme={theme} />
+            <div className="flex flex-row justify-center w-full">
+              <ThemeToggle toggleTheme={toggleTheme} theme={theme} />
+            </div>
           </div>
         </nav>
       </div>

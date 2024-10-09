@@ -10,7 +10,10 @@ module.exports = {
     extend: {
       fontFamily: {
         garamond : ['EB Garamond', 'serif'],
-        cutive: ['Cutive Mono', 'monospace']
+        cutive: ['Cutive Mono', 'monospace'],
+        kanit: ['Kanit', 'sans-serif'],
+        pop: ['Poppins', 'sans-serif'],
+        abel: ['Abel', 'sans-serif'],
       },
       colors: {
         background: "var(--background)",

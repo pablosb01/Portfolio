@@ -1,6 +1,6 @@
 export default function ThemeToggle({ toggleTheme, theme }) {
   return (
-    <label className="relative inline-flex items-center cursor-pointer">
+    <label className="relative inline-flex items-center cursor-pointer shadow2">
       <input
         type="checkbox"
         checked={theme === 'dark'}
