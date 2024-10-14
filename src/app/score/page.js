@@ -1,6 +1,7 @@
 "use client";
 
 import ScreenShotComp from "@/components/ScreenShotComp/ScreenShotComp";
+import Image from "next/image";
 
 export default function score() {
   return (
@@ -83,6 +84,20 @@ export default function score() {
           videoSrc={"/score/playerval.mp4"}
           alt="Nintendo Clone Characters"
         />
+
+        <div className="my-3 flex flex-col">
+          <p className={`font-abel text-2xl`}>
+            Podeis acceder a la pagina completa haciendo click{" "}
+            <a
+              className="text-red-400 dark:text-indigo-500 hover:underline"
+              href="https://stat-tracker-proyect.vercel.app"
+              target="_blank"
+            >
+              aquí
+            </a>
+            {} y navegar a través de ella para apreciar mejor los detalles.
+          </p>
+        </div>
       </div>
     </>
   );

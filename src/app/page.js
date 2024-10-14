@@ -16,7 +16,7 @@ const abel = Abel({
 
 export default function Home() {
   return (
-    <>
+    <div>
       <div className="m-12">
         <h1 className={`font-kanit text-4xl`}>Bienvenidos!</h1>
         <p className={`font-abel text-2xl`}>
@@ -29,7 +29,7 @@ export default function Home() {
         </p>
       </div>
       <PersonalCard />
-    </>
+    </div>
   );
 }
 ``;

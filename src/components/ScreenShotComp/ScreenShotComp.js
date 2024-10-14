@@ -9,20 +9,13 @@ export default function ScreenShotComp({ src, alt, videoSrc }) {
   }
 
   return (
-    <div className="flex justify-center cursor-pointer">
-      <div
-        className={
-          vid
-            ? "fixed top-0 left-0 w-full h-full flex items-center justify-center z-30 bg-stone-900 bg-opacity-70"
-            : "hidden"
-        }
-      >
-        <div>
-          <div className=''>
-            <button
-              onClick={() => setVid(!vid)}
-              className="z-50 self-end btn-effect"
-            >
+    <div className="flex justify-center">
+      {vid && (
+        <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-stone-900 bg-opacity-70 z-50">
+          {" "}
+          {/* Aquí asegúrate de que el z-index sea menor que el navbar */}
+          <div>
+            <button onClick={handleVid} className="self-end btn-effect">
               <svg
                 className="w-8 h-8"
                 fill="none"
@@ -38,20 +31,20 @@ export default function ScreenShotComp({ src, alt, videoSrc }) {
                 />
               </svg>
             </button>
+            <video
+              className="w-full max-w-4xl h-auto rounded-lg shadow2"
+              controls
+              autoPlay
+              muted={true}
+              loop
+            >
+              <source src={videoSrc} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
-          <video
-            className="w-full max-w-4xl h-auto rounded-lg shadow2"
-            controls
-            autoPlay
-            muted={true}
-            loop
-          >
-            <source src={videoSrc} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
         </div>
-      </div>
-      <div className="flex flex-col transform hover:scale-110  transition duration-300">
+      )}
+      <div className="flex flex-col w-full h-fit items-center">
         <h1 className="flex justify-center">
           Click en la imagen para ver video demostración
         </h1>
@@ -61,7 +54,13 @@ export default function ScreenShotComp({ src, alt, videoSrc }) {
           width={1000}
           height={400}
           onClick={handleVid}
-          className="cursor-pointer rounded-lg shadow2"
+          className="cursor-pointer rounded-lg object-contain transition duration-300"
+          style={{ transition: "box-shadow 0.3s ease" }}
+          onMouseEnter={(e) =>
+            (e.currentTarget.style.boxShadow =
+              "0 4px 6px rgba(255, 255, 255, 0.8)")
+          }
+          onMouseLeave={(e) => (e.currentTarget.style.boxShadow = "none")}
         />
       </div>
     </div>

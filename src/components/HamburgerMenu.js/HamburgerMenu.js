@@ -62,12 +62,12 @@ export default function HamburgerMenu() {
   }, []);
 
   return (
-    <div className="relative lg:hidden z-50">
+    <div className="relative lg:hidden">
       <button
         onClick={toggleMenu}
         aria-expanded={isOpen}
         aria-controls="hamburger-menu"
-        className="p-2 text-white bg-gradient-to-b from-red-400 to-red-600 dark:bg-gradient-to-b dark:from-indigo-400 dark:to-indigo-600 rounded-md focus:outline-none z-50"
+        className="p-2 text-white bg-gradient-to-b from-red-400 to-red-600 dark:bg-gradient-to-b dark:from-indigo-400 dark:to-indigo-600 rounded-md focus:outline-none"
       >
         <svg
           className="w-6 h-6"
@@ -90,9 +90,9 @@ export default function HamburgerMenu() {
         ref={menuRef}
         className={`fixed top-0 left-0 w-max h-screen bg-amber-500 dark:bg-cyan-900 text-white transform ${
           isOpen ? "translate-x-0" : "-translate-x-full"
-        } transition-transform duration-300 ease-in-out`}
+        } transition-transform duration-300 ease-in-out z-50`}
       >
-        <nav className="flex flex-col p-4 h-full bg-gradient-to-b from-red-300 to-red-600 dark:bg-gradient-to-t dark:from-zinc-800 dark:to-indigo-800">
+        <nav className="flex flex-col p-4 h-full bg-gradient-to-b from-red-300 to-red-600 dark:bg-gradient-to-t dark:from-zinc-800 dark:to-indigo-800 relative z-50">
           <div className="h-full pl-4 flex flex-col justify-around">
             <img
               src="/yoliteral.png"

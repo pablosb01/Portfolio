@@ -3,21 +3,17 @@ import { Github, Linkedin, Mail } from "lucide-react";
 
 export default function PersonalCard() {
   return (
-    <div className="max-w-md mx-auto bg-white rounded-xl shadow2 overflow-hidden md:max-w-2xl">
+    <div className="flex max-w-sm mx-auto bg-white rounded-xl overflow-hidden md:max-w-2xl shadow-md">
       <div className="md:flex">
-        <div className="relative md:shrink-0">
-          <div className="absolute inset-0 bg-red-500 opacity-80 dark:bg-indigo-500 transition-colors duration-300 ease-in-out"></div>
+        <Image
+          className=" h-48 w-full object-cover md:h-full md:w-48 bg-red-400 dark:bg-indigo-500 transition-color s duration-300"
+          src="/cara.png?height=200&width=200"
+          alt="Foto de perfil"
+          width={200}
+          height={200}
+        />
 
-          <Image
-            className="relative h-48 w-full object-cover md:h-full md:w-48 transition-transform duration-300 ease-in-out hover:scale-110 hover:-translate-y-3"
-            src="/cara.png?height=200&width=200"
-            alt="Foto de perfil"
-            width={200}
-            height={200}
-          />
-        </div>
-
-        <div className="p-8 z-50 bg-zinc-200 dark:bg-zinc-200">
+        <div className="p-8 bg-zinc-200 dark:bg-zinc-200">
           <div className="uppercase font-kanit tracking-wide text-md text-red-500 dark:text-indigo-400 font-semibold">
             Desarrollador Web
           </div>
@@ -38,7 +34,7 @@ export default function PersonalCard() {
               href="https://github.com/pablosb01"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-red-500 hover:text-red-700 dark:text-indigo-400 hover:dark:text-indigo-800 transform hover:scale-110 transition-transform"
+              className="text-red-500 hover:text-red-700 dark:text-indigo-400 hover:dark:text-indigo-800"
             >
               <span className="sr-only">GitHub</span>
               <Github className="h-6 w-6" />
@@ -47,14 +43,14 @@ export default function PersonalCard() {
               href="https://linkedin.com/in/pablosb01"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-red-500 hover:text-red-700 dark:text-indigo-400 hover:dark:text-indigo-800 transform hover:scale-110 transition-transform"
+              className="text-red-500 hover:text-red-700 dark:text-indigo-400 hover:dark:text-indigo-800"
             >
               <span className="sr-only">LinkedIn</span>
               <Linkedin className="h-6 w-6" />
             </a>
             <a
               href="pablosb01@icloud.com"
-              className="text-red-500 hover:text-red-700 dark:text-indigo-400 hover:dark:text-indigo-800 transform hover:scale-110 transition-transform"
+              className="text-red-500 hover:text-red-700 dark:text-indigo-400 hover:dark:text-indigo-800"
             >
               <span className="sr-only">Email</span>
               <Mail className="h-6 w-6" />
