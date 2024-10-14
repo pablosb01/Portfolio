@@ -4,6 +4,7 @@ import Link from "next/link";
 import { EB_Garamond } from "next/font/google";
 import { Cutive_Mono } from "next/font/google";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
+import ContactButton from "../ContactButton/ContactButton";
 
 const garamond = EB_Garamond({
   subsets: ["latin"],
@@ -94,32 +95,11 @@ export default function HamburgerMenu() {
       >
         <nav className="flex flex-col p-4 h-full bg-gradient-to-b from-red-300 to-red-600 dark:bg-gradient-to-t dark:from-zinc-800 dark:to-indigo-800 relative z-50">
           <div className="h-full pl-4 flex flex-col justify-around">
-            <img
-              src="/yoliteral.png"
-              className="w-36 h-36 self-center pr-4"
-            />
-            <div className="border-t-2 border-black dark:border-gray-600 py-2 h-full">
-              <h1
-                className={`font-garamond text-3xl font-semibold text-black dark:text-gray-300 transition-colors duration-300`}
-              >
-                About Me
-              </h1>
-              <Link href="/dev">
-                <p
-                  className={`font-cutive text-2xl text-black dark:text-gray-300 dark:hover:text-violet-400 transition-colors duration-300 hover:cursor-pointer`}
-                >
-                  Development
-                </p>
-              </Link>
-              <Link href="/contact">
-                <p
-                  className={`font-cutive text-2xl text-black dark:text-gray-300 dark:hover:text-violet-400 transition-colors duration-300 hover:cursor-pointer`}
-                >
-                  Contact Me
-                </p>
-              </Link>
+            <img src="/yoliteral.png" className="w-36 h-36 self-center pr-4" />
+            <div className='flex mx-auto p-4'>
+              <ContactButton />
             </div>
-            <div className="border-t-2 border-black dark:border-gray-600 py-2 h-full">
+            <div className="border-t-2 border-black dark:border-gray-600 h-full">
               <div>
                 <h1
                   className={`font-garamond text-3xl font-semibold text-black dark:text-gray-300 transition-colors duration-300`}
@@ -169,13 +149,6 @@ export default function HamburgerMenu() {
                   className={`font-cutive text-2xl text-black dark:text-gray-300 dark:hover:text-violet-400 transition-colors duration-300 hover:cursor-pointer`}
                 >
                   GitHub
-                </p>
-              </Link>
-              <Link href="https://twitter.com">
-                <p
-                  className={`font-cutive text-2xl text-black dark:text-gray-300 dark:hover:text-violet-400 transition-colors duration-300 hover:cursor-pointer`}
-                >
-                  Twitter
                 </p>
               </Link>
             </div>

@@ -7,7 +7,7 @@ export default function ThemeToggle({ toggleTheme, theme }) {
         onChange={toggleTheme}
         className="sr-only peer"
       />
-      <div className="w-11 h-6 bg-red-400 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:bg-gray-700 dark:peer-focus:ring-gray-600 rounded-full peer dark:border-gray-600 peer-checked:bg-violet-400 transition-all duration-300"></div>
+      <div className="w-11 h-6 bg-red-400 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:bg-gray-700 dark:peer-focus:ring-gray-600 rounded-full peer dark:border-gray-600 peer-checked:bg-indigo-500 transition-all duration-300"></div>
       <span className="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition-transform duration-300 peer-checked:translate-x-5 peer-checked:bg-white"></span>
       <svg
         className={`absolute left-1 w-4 h-4 text-zinc-500 transition-opacity duration-500 transform ${
