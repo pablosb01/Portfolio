@@ -24,7 +24,7 @@ export default function Nintendo() {
 
         {localizationData.nintendo_clone.section &&
           localizationData.nintendo_clone.section.map((section, index) => (
-            <section index={index}>
+            <section key={index}>
               <h1 className="font-kanit text-3xl">{section.title}</h1>
               <div className="my-3 flex flex-col">
                 {section.description &&

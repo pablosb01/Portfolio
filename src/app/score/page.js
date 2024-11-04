@@ -22,7 +22,7 @@ export default function Score() {
             ))}
           {localizationData.score_tracker.section &&
             localizationData.score_tracker.section.map((section, sIndex) => (
-              <section index={sIndex}>
+              <section key={sIndex}>
                 <h1 className="font-kanit text-3xl">{section.title}</h1>
                 <div className="my-3 flex flex-col">
                   {section.description &&
