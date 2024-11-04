@@ -5,6 +5,9 @@ import { EB_Garamond } from "next/font/google";
 import { Cutive_Mono } from "next/font/google";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
 import ContactButton from "../ContactButton/ContactButton";
+import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
+import { useLocalization } from "../../app/context/LocalizationContext";
+import LinkNav from "../LinkNav/LinkNav";
 
 const garamond = EB_Garamond({
   subsets: ["latin"],
@@ -21,6 +24,7 @@ export default function HamburgerMenu() {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef(null);
   const [theme, setTheme] = useState("light");
+  const { localizationData } = useLocalization();
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
@@ -93,67 +97,52 @@ export default function HamburgerMenu() {
           isOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-300 ease-in-out z-50`}
       >
-        <nav className="flex flex-col p-4 h-full bg-gradient-to-b from-red-300 to-red-600 dark:bg-gradient-to-t dark:from-zinc-800 dark:to-indigo-800 relative z-50">
+        <nav className="flex flex-col h-full bg-gradient-to-b from-red-300 to-red-600 dark:bg-gradient-to-t dark:from-zinc-800 dark:to-indigo-800 relative z-50 border-r-2 border-black dark:border-gray-600">
           <div className="h-full pl-4 flex flex-col justify-around">
-            <img src="/yoliteral.png" className="w-36 h-36 self-center pr-4" />
-            <div className='flex mx-auto p-4'>
-              <ContactButton />
+            <img src="/yoliteral.png" className="w-36 h-36 self-center pr-4 shadow2" />
+            <div className="flex mx-auto p-4">
+              <ContactButton text={localizationData.navigation.contact}/>
             </div>
-            <div className="border-t-2 border-black dark:border-gray-600 h-full">
-              <div>
-                <h1
-                  className={`font-garamond text-3xl font-semibold text-black dark:text-gray-300 transition-colors duration-300`}
-                >
-                  Projects
-                </h1>
+
+            {localizationData.navigation.items.map((item, index) => (
+              <div
+                key={index}
+                className="h-full md:pl-4 flex flex-col md:justify-around justify-start"
+              >
+                <div className="border-t-2 border-black dark:border-gray-600 py-2 h-fit">
+                  <h1 className="font-garamond text-3xl font-semibold text-black dark:text-gray-300 transition-colors duration-300">
+                    {item.part.title}
+                  </h1>
+
+                  {item.part.items.map((section, subIndex) => (
+                    <div key={subIndex}>
+                      {section.url && section.url[0] === "h" ? (
+                        <div className='pr-3'>
+                          <a
+                            href={section.url}
+                            target={section.target}
+                            rel="noopener noreferrer"
+                            className="font-cutive text-2xl hover:font-bold text-black dark:text-gray-300 dark:hover:text-violet-400 transition-colors duration-300 hover:cursor-pointer"
+                          >
+                            {section.title}
+                          </a>
+                        </div>
+                      ) : (
+                        <div className='pr-3'>
+                          <LinkNav href={section.url} text={section.title} />
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
               </div>
-              <Link href="/nintendo">
-                <p
-                  className={`font-cutive text-2xl text-black dark:text-gray-300 dark:hover:text-violet-400 transition-colors duration-300 hover:cursor-pointer`}
-                >
-                  Nintendo Clone
-                </p>
-              </Link>
-              <Link href="/score">
-                <p
-                  className={`font-cutive text-2xl text-black dark:text-gray-300 dark:hover:text-violet-400 transition-colors duration-300 hover:cursor-pointer`}
-                >
-                  SCORE Tracker
-                </p>
-              </Link>
-              <Link href="/aqs">
-                <p
-                  className={`font-cutive text-2xl text-black dark:text-gray-300 dark:hover:text-violet-400 transition-colors duration-300 hover:cursor-pointer`}
-                >
-                  AquaReloaded
-                </p>
-              </Link>
-            </div>
-            <div className="border-t-2 border-black dark:border-gray-600 py-2 h-full">
-              <div>
-                <h1
-                  className={`font-garamond text-3xl font-semibold text-black dark:text-gray-300 transition-colors duration-300`}
-                >
-                  Social Media
-                </h1>
-              </div>
-              <Link href="https://www.linkedin.com">
-                <p
-                  className={`font-cutive text-2xl text-black dark:text-gray-300 dark:hover:text-violet-400 transition-colors duration-300 hover:cursor-pointer`}
-                >
-                  LinkedIn
-                </p>
-              </Link>
-              <Link href="https://github.com">
-                <p
-                  className={`font-cutive text-2xl text-black dark:text-gray-300 dark:hover:text-violet-400 transition-colors duration-300 hover:cursor-pointer`}
-                >
-                  GitHub
-                </p>
-              </Link>
-            </div>
+            ))}
+
             <div className="flex flex-row justify-center w-full">
               <ThemeToggle toggleTheme={toggleTheme} theme={theme} />
+            </div>
+            <div>
+              <LanguageSwitcher />
             </div>
           </div>
         </nav>

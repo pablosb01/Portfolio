@@ -1,0 +1,205 @@
+{
+  "navigation": {
+    "contact": "Contact",
+    "change_language" : "Switch Language",
+    "items": [
+      {
+        "part": {
+          "title": "Projects",
+          "items": [
+            {
+              "id": "nintendo_clone",
+              "title": "Nintendo Clone",
+              "url": "/nintendo",
+              "target": "_self"
+            },
+            {
+              "id": "score_tracker",
+              "title": "Score Tracker",
+              "url": "/score",
+              "target": "_self"
+            },
+            {
+              "id": "aqua_reloaded",
+              "title": "Aqua Reloaded",
+              "url": "/aqs",
+              "target": "_self"
+            }
+          ]
+        }
+      },
+      {
+        "part": {
+          "title": "Social Media",
+          "items": [
+            {
+              "id": "linkedin",
+              "title": "LinkedIn",
+              "url": "https://www.linkedin.com/in/pablosb01",
+              "target": "_self"
+            },
+            {
+              "id": "github",
+              "title": "GitHub",
+              "url": "https://github.com/pablosb01",
+              "target": "_blank"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "home": {
+    "about_me": "About me",
+    "about_text": "I am a FullStack web developer with training from DevelHope, where I acquired a solid foundation in technologies such as JavaScript, React, and Express. I have experience in web application development and teamwork, applying agile methodologies like Scrum and managing projects with Git. I consider myself a proactive person, with skills to solve problems and adapt to situations under pressure.",
+    "skills": {
+      "title": "Skills",
+      "items": [
+        "JavaScript",
+        "TypeScript",
+        "SQL",
+        "React",
+        "Next.js",
+        "Vite.js",
+        "Express",
+        "Node.js",
+        "HTML + CSS",
+        "TailwindCSS"
+      ]
+    },
+    "abilities": {
+      "title": "Abilities",
+      "items": [
+        "Good communication",
+        "Problem-solving",
+        "Teamwork",
+        "Creativity",
+        "Leadership ability",
+        "Spanish (native)",
+        "English (advanced)"
+      ]
+    },
+    "academic_info": {
+      "title": "Academic Information",
+      "items": [
+        {
+          "title": "DevelHope",
+          "course": "FullStack Web Developer | October 2023 - July 2024",
+          "description": "Bootcamp that provided me the opportunity to deeply learn languages like JavaScript and TypeScript, as well as face real work challenges using HTML, CSS, React, and Node.js."
+        },
+        {
+          "title": "IES Infiesto",
+          "course": "Scientific Technological Baccalaureate | September 2019 - July 2021"
+        }
+      ]
+    }
+  },
+
+  "nintendo_clone": {
+    "title": "Nintendo Clone",
+    "description": [
+      "This was my first project, developed with my team at DevelHope, where we learned to work together, using Trello for task division and GitHub for version control.",
+      "The project involved cloning the main Nintendo page to improve our skills as novice developers and learn to use HTML and CSS, which were the technologies we were learning at that time.",
+      "The two sections I chose were Characters and the Footer, which provides direct access to all Nintendo directories and legal topics."
+    ],
+    "section": [
+      {
+        "title": "Characters",
+        "description": [
+          "In this segment of the page, you can see the main characters of the franchise, such as Mario, Link, and Pikachu, among others. Each image has a hover effect that gives a sense of depth.",
+          "example map"
+        ],
+        "img": {
+          "src": "/nintendo/charactersnintendo.png",
+          "vid": "/nintendo/nintendovid.mp4",
+          "alt": "Image of Nintendo characters"
+        }
+      },
+      {
+        "title": "Footer",
+        "description": [
+          "In this other segment, you can distinguish three parts: the first, in red, includes the logo and direct access to the company's social networks. The second, with a white background, contains links to all page routes, separated by sections for better navigation."
+        ],
+        "img": {
+          "src": "/nintendo/nintendofooter.png",
+          "vid": "/nintendo/footernintendovideo.mp4",
+          "alt": "Image of Nintendo's footer"
+        }
+      }
+    ]
+  },
+  "score_tracker": {
+    "title": "Score Tracker",
+    "description": [
+      "First project created from scratch by our team, where we used Figma for design, Trello for task division, and GitHub for version control.",
+      "The core of the project is to create a platform dedicated to gamers where they can view the statistics of their favorite games in one place. For this page, we chose to use React and Tailwind, with Vite.",
+      "My contributions included developing the home page, navbar, and various components for the Valorant section, as well as implementing all the logic to calculate statistics."
+    ],
+    "section": [
+      {
+        "title": "Home",
+        "description": [
+          "On this route, you can see quick access to the two games currently implemented on the website, as well as two others that are in progress."
+        ],
+        "img": {
+          "src": "/score/scorehome.png",
+          "vid": "/score/scorehome.mp4",
+          "alt": "Score Tracker Home Page"
+        }
+      },
+      {
+        "title": "Valorant Home",
+        "description": [
+          "On the main page for Valorant, you can see a search bar to enter your username, a section with the agents available in the game and their win and pick rates in matches, and a table showing the top 3 players in the Europe region. You can also notice a detail in the navigation bar, where the page you are on changes to match the background color, creating a depth effect."
+        ],
+        "img": {
+          "src": "/score/valohome.png",
+          "vid": "/score/valohome.mp4",
+          "alt": "Valorant Home Page on Score Tracker"
+        }
+      },
+      {
+        "title": "Valorant Profile",
+        "description": [
+          "On the Valorant player page, you can see a summary of your stats on the left, the average of your last 10 matches played on your account, and on the right, the summary of each specific match, with stats for that particular game, the agent played, and the date it was played. Currently, this section is not yet functional as we are waiting for access to Riot's API, but once granted, everything is set up to be fully operational."
+        ],
+        "img": {
+          "src": "/score/profileval.png",
+          "vid": "/score/playerval.mp4",
+          "alt": "Valorant Player Profile Page on Score Tracker"
+        }
+      }
+    ],
+    "final": {
+      "p1": "You can access the full page by clicking",
+      "p2": "here",
+      "p3": "and browse through it to better appreciate the details.",
+      "link": "https://stat-tracker-proyect.vercel.app"
+    }
+  },
+  "aqua_reloaded": {
+    "title": "AquaReloaded",
+    "description": [
+      "First personal project, in collaboration with my partner Antonio Martínez, where we aimed to give a fresh perspective to the Aquasella festival's website. We focused on a more creative and visual approach to better organize the layout and provide information effectively.",
+      "The technologies used in this project were, once again, Figma for the page design, GitHub for version control, and React. We decided to go with the Next.js framework, as our research showed it to be the most advanced and accessible library within React.",
+      "Almost the entire project was developed jointly between Antonio and me, supporting each other at every step, contributing ideas, and working as a single entity."
+    ],
+    "section": [
+      {
+        "img": {
+          "src": "/aqs/aquahome.png",
+          "vid": "/aqs/aquahome.mp4",
+          "alt": "Aqua Reloaded Homepage"
+        }
+      }
+    ],
+    "final": {
+      "p1": "You can access the complete page by clicking",
+      "p2": "here",
+      "p3": "and navigate through it. The page includes all the routes from the original site, plus some additional ones we decided to implement to complement the information they provide on Instagram about the festival.",
+      "link1": "https://aqua-reloaded.vercel.app",
+      "p4": "You can also access the official website of the festival by clicking",
+      "p5": "as well as access my partner Antonio's portfolio"
+    }
+  }
+}

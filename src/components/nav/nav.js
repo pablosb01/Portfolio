@@ -9,6 +9,8 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import LinkNav from "../LinkNav/LinkNav";
 import ContactButton from "../ContactButton/ContactButton";
+import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
+import { useLocalization } from "../../app/context/LocalizationContext";
 
 const garamond = EB_Garamond({
   subsets: ["latin"],
@@ -23,6 +25,7 @@ const cutive = Cutive_Mono({
 
 export default function LeftNav() {
   const [theme, setTheme] = useState("light");
+  const { localizationData } = useLocalization();
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
@@ -53,56 +56,40 @@ export default function LeftNav() {
             </div>
             <ImageNavbar />
           </div>
-          <ContactButton />
+          <ContactButton text={localizationData.navigation.contact} />
         </div>
-        <div className="h-full pl-4 flex flex-col justify-around">
-          <div className="border-t-2 border-black dark:border-gray-600 py-2 h-fit">
-            <h1
-              className={`font-garamond text-3xl font-semibold text-black dark:text-gray-300 transition-colors duration-300`}
-            >
-              Projects
-            </h1>
-            <div>
-              <LinkNav href="/nintendo" text="Nintendo Clone" />
-            </div>
-            <div>
-              <LinkNav href="/score" text="Score Tracker" />
-            </div>
-            <div>
-              <LinkNav href="/aqs" text="AquaReloaded" />
+
+        {localizationData.navigation.items.map((item, index) => (
+          <div key={index} className="h-full pl-4 flex flex-col justify-around">
+            <div className="border-t-2 border-black dark:border-gray-600 py-2 h-fit">
+              <h1 className="font-garamond text-3xl font-semibold text-black dark:text-gray-300 transition-colors duration-300">
+                {item.part.title}
+              </h1>
+
+              {item.part.items.map((section, subIndex) => (
+                <div key={subIndex}>
+                  {section.url && section.url[0] === "h" ? (
+                    <div>
+                      <a
+                        href={section.url}
+                        target={section.target}
+                        rel="noopener noreferrer"
+                        className="font-cutive text-2xl hover:font-bold text-black dark:text-gray-300 dark:hover:text-violet-400 transition-colors duration-300 hover:cursor-pointer"
+                      >
+                        {section.title}
+                      </a>
+                    </div>
+                  ) : (
+                    <div>
+                      <LinkNav href={section.url} text={section.title} />
+                    </div>
+                  )}
+                </div>
+              ))}
             </div>
           </div>
-          <div className="border-t-2 border-black dark:border-gray-600 py-2 h-fit ">
-            <h1
-              className={`font-garamond text-3xl font-semibold text-black dark:text-gray-300 transition-colors duration-300`}
-            >
-              Social Media
-            </h1>
-            <div>
-              <a
-                href="https://www.linkedin.com/in/pablosb01"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`font-cutive text-2xl hover:font-bold text-black dark:text-gray-300 dark:hover:text-violet-400 transition-colors duration-300 hover:cursor-pointer`}
-              >
-                LinkedIn
-              </a>
-            </div>
-            <div>
-              <Link
-                href="https://github.com/pablosb01"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <p
-                  className={`font-cutive text-2xl hover:font-bold text-black dark:text-gray-300 dark:hover:text-violet-400 transition-colors duration-300 hover:cursor-pointer`}
-                >
-                  GitHub
-                </p>
-              </Link>
-            </div>
-          </div>
-        </div>
+        ))}
+
         <div className="flex justify-center p-4 mt-14">
           <ThemeToggle toggleTheme={toggleTheme} theme={theme} />
         </div>
