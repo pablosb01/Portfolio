@@ -22,7 +22,7 @@ export default function Aqs() {
         </div>
 
         {localizationData.aqua_reloaded.section.map((section, index) => (
-          <ScreenShotComp
+          <ScreenShotComp key={index}
             index={index}
             src={section.img.src}
             videoSrc={section.img.vid}

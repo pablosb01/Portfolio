@@ -16,7 +16,7 @@ export default function Nintendo() {
         <div className="my-10 flex gap-2 flex-col">
           {localizationData.nintendo_clone.description &&
             localizationData.nintendo_clone.description.map((p, index) => (
-              <p index={index} className={`font-abel text-2xl`}>
+              <p key={index} className={`font-abel text-2xl`}>
                 {p}
               </p>
             ))}
@@ -29,7 +29,7 @@ export default function Nintendo() {
               <div className="my-3 flex flex-col">
                 {section.description &&
                   section.description.map((p, pIndex) => (
-                    <p index={pIndex} className={`font-abel text-2xl`}>
+                    <p key={pIndex} className={`font-abel text-2xl`}>
                       {p}
                     </p>
                   ))}
