@@ -5,7 +5,7 @@ import ParaText from "@/components/ParaText/ParaText";
 import info from "@/data/info.js";
 import { useLocalization } from "../app/context/LocalizationContext.js";
 
-export default function dev() {
+export default function Dev() {
   const { localizationData } = useLocalization();
 
 

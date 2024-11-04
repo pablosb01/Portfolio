@@ -3,7 +3,7 @@
 import ScreenShotComp from "@/components/ScreenShotComp/ScreenShotComp";
 import { useLocalization } from "../context/LocalizationContext";
 
-export default function aqs() {
+export default function Aqs() {
   const { localizationData } = useLocalization();
 
   return (
