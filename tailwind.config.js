@@ -14,6 +14,7 @@ module.exports = {
         kanit: ['Kanit', 'sans-serif'],
         pop: ['Poppins', 'sans-serif'],
         abel: ['Abel', 'sans-serif'],
+        sans: ['Arial', 'Helvetica', 'sans-serif']
       },
       colors: {
         background: "var(--background)",

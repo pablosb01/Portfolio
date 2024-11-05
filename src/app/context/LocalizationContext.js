@@ -8,8 +8,8 @@ const LocalizationContext = createContext();
 export const LocalizationProvider = ({ children }) => {
     const [language, setLanguage] = useState('es');
 
-    const toggleLanguage = () => {
-        setLanguage((prevLang) => (prevLang === 'es' ? 'en' : "es"));
+    const toggleLanguage = (lang) => {
+        setLanguage(lang);
     };
 
     const localizationData = language === 'es' ? es : en;

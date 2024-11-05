@@ -8,6 +8,7 @@ import "@fontsource/cutive-mono"; // Cutive Mono
 import "@fontsource/kanit"; // Kanit
 import "@fontsource/poppins"; // Poppins
 import "@fontsource/abel"; // Abel
+import '@fontsource/noto-color-emoji';
 import { LocalizationProvider } from "./context/LocalizationContext";
 
 export const metadata = {
