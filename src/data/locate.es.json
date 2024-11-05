@@ -24,6 +24,12 @@
               "title": "Aqua Reloaded",
               "url": "/aqs",
               "target": "_self"
+            },
+            {
+              "id": "githubrepos",
+              "title": "Repositorios Github",
+              "url": "/githubrepos",
+              "target": "_self"
             }
           ]
         }
@@ -202,5 +208,11 @@
       "p4" : "También podeis acceder a la pagina web oficial del festival haciendo click",
       "p5" : "así como acceder al Portfolio de mi compañero Antonio"
     }
+  },
+  "github_repos" : {
+    "repos" : "Repositorios",
+    "public" : "publico",
+    "followers" : "Seguidores",
+    "following" : "Siguiendo"
   }
 }
