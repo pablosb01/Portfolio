@@ -93,7 +93,7 @@ export default function HamburgerMenu() {
       <div
         id="hamburger-menu"
         ref={menuRef}
-        className={`fixed top-0 left-0 w-max h-screen bg-amber-500 dark:bg-cyan-900 text-white transform ${
+        className={`fixed top-0 left-0 w-max h-screen dark:bg-cyan-900 text-white transform ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-300 ease-in-out z-50`}
       >
@@ -138,11 +138,8 @@ export default function HamburgerMenu() {
               </div>
             ))}
 
-            <div className="flex flex-row justify-center w-full">
+            <div className="flex flex-row justify-center w-full p-10">
               <ThemeToggle toggleTheme={toggleTheme} theme={theme} />
-            </div>
-            <div>
-              <LanguageSwitcher />
             </div>
           </div>
         </nav>

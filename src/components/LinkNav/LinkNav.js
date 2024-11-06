@@ -3,8 +3,6 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 
-
-
 export default function LinkNav({ href, text }) {
   const pathname = usePathname()
   const isActive = pathname === href

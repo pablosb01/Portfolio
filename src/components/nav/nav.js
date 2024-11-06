@@ -64,7 +64,7 @@ export default function LeftNav() {
                         href={section.url}
                         target={section.target}
                         rel="noopener noreferrer"
-                        className={`font-cutive text-2xl hover:font-bold text-black dark:text-gray-300 dark:hover:text-violet-400 transition-colors duration-300 hover:cursor-pointer ${
+                        className={`font-cutive text-2xl hover:font-bold text-black dark:text-gray-300 dark:hover:text-indigo-500 transition-colors duration-300 hover:cursor-pointer ${
                           isActive(section.url) ? "bg-red-500" : ""
                         }`}
                       >
