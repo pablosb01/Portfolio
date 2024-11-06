@@ -1,31 +1,17 @@
 "use client";
 
-import Image from "next/image";
-import { EB_Garamond } from "next/font/google";
-import { Cutive_Mono } from "next/font/google";
+import { usePathname } from "next/navigation";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
 import ImageNavbar from "../ImageNavbar/ImageNavbar";
 import { useEffect, useState } from "react";
-import Link from "next/link";
 import LinkNav from "../LinkNav/LinkNav";
 import ContactButton from "../ContactButton/ContactButton";
-import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
 import { useLocalization } from "../../app/context/LocalizationContext";
-
-const garamond = EB_Garamond({
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const cutive = Cutive_Mono({
-  weight: "400",
-  subsets: ["latin"],
-  display: "swap",
-});
 
 export default function LeftNav() {
   const [theme, setTheme] = useState("light");
   const { localizationData } = useLocalization();
+  const pathname = usePathname();
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
@@ -44,6 +30,10 @@ export default function LeftNav() {
     document.documentElement.classList.add(newTheme);
     localStorage.setItem("theme", newTheme);
     setTheme(newTheme);
+  };
+
+  const isActive = (url) => {
+    return pathname === url;
   };
 
   return (
@@ -74,7 +64,9 @@ export default function LeftNav() {
                         href={section.url}
                         target={section.target}
                         rel="noopener noreferrer"
-                        className="font-cutive text-2xl hover:font-bold text-black dark:text-gray-300 dark:hover:text-violet-400 transition-colors duration-300 hover:cursor-pointer"
+                        className={`font-cutive text-2xl hover:font-bold text-black dark:text-gray-300 dark:hover:text-violet-400 transition-colors duration-300 hover:cursor-pointer ${
+                          isActive(section.url) ? "bg-red-500" : ""
+                        }`}
                       >
                         {section.title}
                       </a>
