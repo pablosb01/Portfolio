@@ -213,5 +213,12 @@
     "public" : "public",
     "followers" : "Followers",
     "following" : "Following"
-  }
+  },
+  "contact": {
+    "title": "Contact me!",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message"
+}
+
 }

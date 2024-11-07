@@ -1,8 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import { useLocalization } from "../../app/context/LocalizationContext";
 
 const ContactForm = () => {
+  const { localizationData } = useLocalization();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -52,7 +54,7 @@ const ContactForm = () => {
         <h2
           className={`font-kanit text-4xl font-bold mb-6 text-gray-800 text-center`}
         >
-          Contáctame!
+          {localizationData.contact.title}
         </h2>
 
         {isSubmitted && (
@@ -69,7 +71,7 @@ const ContactForm = () => {
               htmlFor="name"
               className={`font-abel block text-xl text-gray-700`}
             >
-              Nombre
+              {localizationData.contact.name}
             </label>
             <input
               type="text"
@@ -87,7 +89,7 @@ const ContactForm = () => {
               htmlFor="email"
               className={`font-abel block text-xl text-gray-700`}
             >
-              Email
+              {localizationData.contact.email}
             </label>
             <input
               type="email"
@@ -105,7 +107,7 @@ const ContactForm = () => {
               htmlFor="message"
               className={`font-abel block text-xl text-gray-700`}
             >
-              Mensaje
+              {localizationData.contact.message}
             </label>
             <textarea
               id="message"

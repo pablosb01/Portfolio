@@ -1,0 +1,224 @@
+{
+  "navigation": {
+    "contact": "Contact",
+    "change_language": "Changer de langue",
+    "items": [
+      {
+        "part": {
+          "title": "Projets",
+          "items": [
+            {
+              "id": "nintendo_clone",
+              "title": "Clone de Nintendo",
+              "url": "/nintendo",
+              "target": "_self"
+            },
+            {
+              "id": "score_tracker",
+              "title": "Suivi des Scores",
+              "url": "/score",
+              "target": "_self"
+            },
+            {
+              "id": "aqua_reloaded",
+              "title": "Aqua Reloaded",
+              "url": "/aqs",
+              "target": "_self"
+            },
+            {
+              "id": "githubrepos",
+              "title": "Dépôts GitHub",
+              "url": "/githubrepos",
+              "target": "_self"
+            }
+          ]
+        }
+      },
+      {
+        "part": {
+          "title": "Réseaux Sociaux",
+          "items": [
+            {
+              "id": "linkedin",
+              "title": "LinkedIn",
+              "url": "https://www.linkedin.com/in/pablosb01",
+              "target": "_self"
+            },
+            {
+              "id": "github",
+              "title": "GitHub",
+              "url": "https://github.com/pablosb01",
+              "target": "_blank"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "home": {
+    "about_me": "À propos de moi",
+    "about_text": "Je suis un développeur web FullStack formé par DevelHope, où j'ai acquis une base solide en technologies comme JavaScript, React et Express. J'ai de l'expérience dans le développement d'applications web et le travail en équipe, en appliquant des méthodologies agiles comme Scrum et en gérant des projets avec Git. Je me considère comme une personne proactive, avec des compétences pour résoudre des problèmes et m'adapter aux situations sous pression.",
+    "skills": {
+      "title": "Compétences",
+      "items": [
+        "JavaScript",
+        "TypeScript",
+        "SQL",
+        "React",
+        "Next.js",
+        "Vite.js",
+        "Express",
+        "Node.js",
+        "HTML + CSS",
+        "TailwindCSS"
+      ]
+    },
+    "abilities": {
+      "title": "Aptitudes",
+      "items": [
+        "Bonne communication",
+        "Résolution de problèmes",
+        "Travail en équipe",
+        "Créativité",
+        "Capacité de leadership",
+        "Espagnol (natif)",
+        "Anglais (avancé)"
+      ]
+    },
+    "academic_info": {
+      "title": "Informations Académiques",
+      "items": [
+        {
+          "title": "DevelHope",
+          "course": "Développeur Web FullStack | Octobre 2023 - Juillet 2024",
+          "description": "Bootcamp qui m'a permis d'apprendre en profondeur des langages comme JavaScript et TypeScript, ainsi que de relever des défis de travail réels en utilisant HTML, CSS, React et Node.js."
+        },
+        {
+          "title": "IES Infiesto",
+          "course": "Baccalauréat Scientifique et Technologique | Septembre 2019 - Juillet 2021"
+        }
+      ]
+    }
+  },
+
+  "nintendo_clone": {
+    "title": "Clone de Nintendo",
+    "description": [
+      "Ce fut mon premier projet, développé avec mon équipe chez DevelHope, où nous avons appris à travailler ensemble, en utilisant Trello pour la division des tâches et GitHub pour le contrôle de version.",
+      "Le projet consistait à cloner la page principale de Nintendo pour améliorer nos compétences en tant que développeurs débutants et apprendre à utiliser HTML et CSS, qui étaient les technologies que nous apprenions à l'époque.",
+      "Les deux sections que j'ai choisies étaient les Personnages et le Pied de page, qui fournit un accès direct à tous les répertoires Nintendo et aux sujets juridiques."
+    ],
+    "section": [
+      {
+        "title": "Personnages",
+        "description": [
+          "Dans cette partie de la page, vous pouvez voir les principaux personnages de la franchise, tels que Mario, Link et Pikachu, entre autres. Chaque image a un effet de survol qui donne une impression de profondeur.",
+          "exemple de carte"
+        ],
+        "img": {
+          "src": "/nintendo/charactersnintendo.png",
+          "vid": "/nintendo/nintendovid.mp4",
+          "alt": "Image des personnages Nintendo"
+        }
+      },
+      {
+        "title": "Pied de page",
+        "description": [
+          "Dans cette autre partie, vous pouvez distinguer trois sections : la première, en rouge, comprend le logo et un accès direct aux réseaux sociaux de l'entreprise. La deuxième, avec un fond blanc, contient des liens vers toutes les routes de la page, séparées par sections pour une meilleure navigation."
+        ],
+        "img": {
+          "src": "/nintendo/nintendofooter.png",
+          "vid": "/nintendo/footernintendovideo.mp4",
+          "alt": "Image du pied de page de Nintendo"
+        }
+      }
+    ]
+  },
+  "score_tracker": {
+    "title": "Suivi des Scores",
+    "description": [
+      "Premier projet créé de zéro par notre équipe, où nous avons utilisé Figma pour le design, Trello pour la division des tâches et GitHub pour le contrôle de version.",
+      "Le cœur du projet est de créer une plateforme dédiée aux joueurs où ils peuvent voir les statistiques de leurs jeux préférés en un seul endroit. Pour cette page, nous avons choisi d'utiliser React et Tailwind, avec Vite.",
+      "Mes contributions incluaient le développement de la page d'accueil, de la barre de navigation et de divers composants pour la section Valorant, ainsi que la mise en œuvre de toute la logique pour calculer les statistiques."
+    ],
+    "section": [
+      {
+        "title": "Accueil",
+        "description": [
+          "Sur cette route, vous pouvez voir un accès rapide aux deux jeux actuellement implémentés sur le site, ainsi que deux autres qui sont en cours."
+        ],
+        "img": {
+          "src": "/score/scorehome.png",
+          "vid": "/score/scorehome.mp4",
+          "alt": "Page d'accueil de Score Tracker"
+        }
+      },
+      {
+        "title": "Accueil Valorant",
+        "description": [
+          "Sur la page principale de Valorant, vous pouvez voir une barre de recherche pour entrer votre nom d'utilisateur, une section avec les agents disponibles dans le jeu et leurs taux de victoire et de sélection dans les matchs, ainsi qu'un tableau montrant les 3 meilleurs joueurs de la région Europe. Vous pouvez également remarquer un détail dans la barre de navigation, où la page sur laquelle vous vous trouvez change pour correspondre à la couleur d'arrière-plan, créant un effet de profondeur."
+        ],
+        "img": {
+          "src": "/score/valohome.png",
+          "vid": "/score/valohome.mp4",
+          "alt": "Page d'accueil Valorant sur Score Tracker"
+        }
+      },
+      {
+        "title": "Profil Valorant",
+        "description": [
+          "Sur la page du joueur Valorant, vous pouvez voir un résumé de vos statistiques sur la gauche, la moyenne de vos 10 derniers matchs joués sur votre compte, et à droite, le résumé de chaque match spécifique, avec des statistiques pour ce jeu en particulier, l'agent joué et la date à laquelle il a été joué. Actuellement, cette section n'est pas encore fonctionnelle car nous attendons l'accès à l'API de Riot, mais une fois accordé, tout est prêt pour être pleinement opérationnel."
+        ],
+        "img": {
+          "src": "/score/profileval.png",
+          "vid": "/score/playerval.mp4",
+          "alt": "Page de profil joueur Valorant sur Score Tracker"
+        }
+      }
+    ],
+    "final": {
+      "p1": "Vous pouvez accéder à la page complète en cliquant",
+      "p2": "ici",
+      "p3": "et la parcourir pour mieux apprécier les détails.",
+      "link": "https://stat-tracker-proyect.vercel.app"
+    }
+  },
+  "aqua_reloaded": {
+    "title": "AquaReloaded",
+    "description": [
+      "Premier projet personnel, en collaboration avec mon partenaire Antonio Martínez, où nous avons cherché à donner une perspective nouvelle au site web du festival Aquasella. Nous nous sommes concentrés sur une approche plus créative et visuelle pour mieux organiser la mise en page et fournir des informations efficacement.",
+      "Les technologies utilisées dans ce projet étaient, une fois de plus, Figma pour le design de la page, GitHub pour le contrôle de version, et React. Nous avons décidé d'opter pour le framework Next.js, car nos recherches ont montré qu'il s'agissait de la bibliothèque la plus avancée et accessible au sein de React.",
+      "Presque tout le projet a été développé conjointement entre Antonio et moi, nous soutenant à chaque étape, contribuant des idées et travaillant comme une seule entité."
+    ],
+    "section": [
+      {
+        "img": {
+          "src": "/aqs/aquahome.png",
+          "vid": "/aqs/aquahome.mp4",
+          "alt": "Page d'accueil Aqua Reloaded"
+        }
+      }
+    ],
+    "final": {
+      "p1": "Vous pouvez accéder à la page complète en cliquant",
+      "p2": "ici",
+      "p3": "et la parcourir. La page inclut toutes les routes du site original, ainsi que quelques routes supplémentaires que nous avons décidé d'implémenter pour compléter les informations qu'ils fournissent sur Instagram à propos du festival.",
+      "link1": "https://aqua-reloaded.vercel.app",
+      "p4": "Vous pouvez également accéder au site officiel du festival en cliquant",
+      "p5": "ainsi qu'accéder au portfolio de mon partenaire Antonio"
+    }
+  },
+  "github_repos": {
+    "repos": "Dépôts",
+    "public": "public",
+    "followers": "Abonnés",
+    "following": "Abonnements"
+  },
+  "contact": {
+    "title": "Contactez-moi !",
+    "name": "Nom",
+    "email": "Courriel",
+    "message": "Message"
+}
+
+}

@@ -214,5 +214,11 @@
     "public" : "publico",
     "followers" : "Seguidores",
     "following" : "Siguiendo"
+  },
+  "contact" : {
+    "title" : "Contactame!",
+    "name" : "Nombre",
+    "email" : "Correo Electronico",
+    "message" : "Mensaje"
   }
 }
