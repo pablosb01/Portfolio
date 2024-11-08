@@ -9,7 +9,6 @@ const LanguageSwitcher = () => {
   const languages = [
     { code: 'es', label: 'Español', flag: '/es.png' }, // Usando la ruta desde public
     { code: 'en', label: 'English', flag: '/eng.png' }, // Usando la ruta desde public
-    { code: 'fr', label: 'French', flag: '/fr.png' }, // Usando la ruta desde public
   ];
 
   const selectedLanguage = languages.find(lang => lang.code === language);

@@ -2,11 +2,10 @@
 import React, { createContext, useContext, useState } from 'react';
 import es from "../../data/locate.es.json";
 import en from "../../data/locate.en.json";
-import fr from "../../data/locate.fr.json";
 
 const LocalizationContext = createContext();
 
-const languages = { es, en, fr};
+const languages = { es, en,};
 
 export const LocalizationProvider = ({ children }) => {
     const [language, setLanguage] = useState('es');
