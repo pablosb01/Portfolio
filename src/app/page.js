@@ -4,10 +4,11 @@ import TitleText from "@/components/TitleText/TitleText";
 import ParaText from "@/components/ParaText/ParaText";
 import info from "@/data/info.js";
 import { useLocalization } from "../app/context/LocalizationContext.js";
+import GitRepos from "@/components/GitRepos/GitRepos.js";
+import Spline from "@splinetool/react-spline/next";
 
 export default function Dev() {
   const { localizationData } = useLocalization();
-
 
   return (
     <>
@@ -63,6 +64,10 @@ export default function Dev() {
           </div>
         ))}
       </div>
+      <div className="h-[400px] w-full justify-center items-center">
+        <Spline scene="https://prod.spline.design/eEfiI6MyxGekbWNU/scene.splinecode" />
+      </div>
+      <GitRepos />
     </>
   );
 }

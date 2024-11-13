@@ -15,6 +15,8 @@
     "@fontsource/kanit": "^5.1.0",
     "@fontsource/noto-color-emoji": "^5.1.0",
     "@fontsource/poppins": "^5.1.0",
+    "@splinetool/react-spline": "^4.0.0",
+    "@splinetool/runtime": "^1.9.38",
     "lucide-react": "^0.447.0",
     "next": "14.2.13",
     "react": "^18",

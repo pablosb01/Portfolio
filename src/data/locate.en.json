@@ -24,12 +24,6 @@
               "title": "Aqua Reloaded",
               "url": "/aqs",
               "target": "_self"
-            },
-            {
-              "id": "githubrepos",
-              "title": "GitHub Repositories",
-              "url": "/githubrepos",
-              "target": "_self"
             }
           ]
         }
