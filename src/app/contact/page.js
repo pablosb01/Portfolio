@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
 import { useLocalization } from "../../app/context/LocalizationContext";
 
 const ContactForm = () => {
@@ -49,8 +50,13 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="h-full flex">
-      <div className="max-w-[50%] w-full min-w-[16rem] mx-auto my-4 bg-white dark:bg-zinc-300 shadow-lg rounded-md p-8 self-center">
+    <div className="h-full flex justify-center items-center">
+      <motion.div
+        className="max-w-[50%] w-full min-w-[16rem] mx-auto my-4 bg-white dark:bg-zinc-300 shadow-lg rounded-md p-8"
+        initial={{ opacity: 0, y: 50 }}  // Inicializa con opacidad 0 y desplazado hacia abajo
+        animate={{ opacity: 1, y: 0 }}   // Cuando entra en vista, muestra con opacidad 1 y sin desplazamiento
+        transition={{ duration: 0.8 }}    // Duración de la animación
+      >
         <h2
           className={`font-kanit text-4xl font-bold mb-6 text-gray-800 text-center`}
         >
@@ -127,7 +133,7 @@ const ContactForm = () => {
             Enviar
           </button>
         </form>
-      </div>
+      </motion.div>
     </div>
   );
 };

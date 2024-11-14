@@ -3,33 +3,69 @@
 import ScreenShotComp from "@/components/ScreenShotComp/ScreenShotComp";
 import Image from "next/image";
 import { useLocalization } from "../context/LocalizationContext";
+import { motion } from "framer-motion";
 
 export default function Score() {
   const { localizationData } = useLocalization();
+
+  // Configuración de animación para aparecer desde abajo
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
+  };
+
   return (
     <>
-      
       <div className="m-12">
-        <h1 className="font-kanit text-4xl border-b-2 border-b-red-400 dark:border-b-indigo-500">
+        <motion.h1
+          className="font-kanit text-4xl border-b-2 border-b-red-400 dark:border-b-indigo-500"
+          initial="hidden"
+          whileInView="visible"
+          variants={fadeInUp}
+          viewport={{ once: true, amount: 0.2 }}
+        >
           {localizationData.score_tracker.title}
-        </h1>
+        </motion.h1>
+
         <div className="my-10 flex gap-2 flex-col">
           {localizationData.score_tracker.description &&
             localizationData.score_tracker.description.map((des, index) => (
-              <p key={index} className={`font-abel text-2xl`}>
+              <motion.p
+                key={index}
+                className={`font-abel text-2xl`}
+                initial="hidden"
+                whileInView="visible"
+                variants={fadeInUp}
+                viewport={{ once: true, amount: 0.2 }}
+              >
                 {des}
-              </p>
+              </motion.p>
             ))}
+
           {localizationData.score_tracker.section &&
             localizationData.score_tracker.section.map((section, sIndex) => (
-              <section key={sIndex}>
+              <motion.section
+                key={sIndex}
+                initial="hidden"
+                whileInView="visible"
+                variants={fadeInUp}
+                viewport={{ once: true, amount: 0.2 }}
+              >
                 <h1 className="font-kanit text-3xl">{section.title}</h1>
+
                 <div className="my-3 flex flex-col">
                   {section.description &&
                     section.description.map((p, pIndex) => (
-                      <p key={pIndex} className={`font-abel text-2xl`}>
+                      <motion.p
+                        key={pIndex}
+                        className={`font-abel text-2xl`}
+                        initial="hidden"
+                        whileInView="visible"
+                        variants={fadeInUp}
+                        viewport={{ once: true, amount: 0.2 }}
+                      >
                         {p}
-                      </p>
+                      </motion.p>
                     ))}
                 </div>
 
@@ -38,9 +74,16 @@ export default function Score() {
                   videoSrc={section.img.vid}
                   alt={section.img.alt}
                 />
-              </section>
+              </motion.section>
             ))}
-          <div className="my-3 flex flex-col">
+
+          <motion.div
+            className="my-3 flex flex-col"
+            initial="hidden"
+            whileInView="visible"
+            variants={fadeInUp}
+            viewport={{ once: true, amount: 0.2 }}
+          >
             <p className={`font-abel text-2xl`}>
               {localizationData.score_tracker.final.p1}{" "}
               <a
@@ -52,7 +95,7 @@ export default function Score() {
               </a>
               {} {localizationData.score_tracker.final.p3}
             </p>
-          </div>
+          </motion.div>
         </div>
       </div>
     </>
