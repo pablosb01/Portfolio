@@ -18,7 +18,7 @@ export default function Dev() {
 
   return (
     <>
-      <div className="m-12 flex flex-col gap-8">
+      <div className="m-12 flex flex-col gap-8 -z-10">
         <motion.div
           initial="hidden"
           whileInView="visible"

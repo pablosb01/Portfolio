@@ -133,7 +133,7 @@ export default function GitProfile({ user, repos }) {
               className="group flex flex-col flex-grow basis-200 gap-4 p-4 border-b-2 border-zinc-400 hover:border-zinc-200 dark:border-zinc-600 dark:hover:border-zinc-400 shadow-lg bg-zinc-400 dark:bg-zinc-600 rounded-xl min-w-64 transition-colors duration-300"
             >
               <div className="flex flex-row justify-between items-center gap-4">
-                <div className="text-xl md:text-2xl font-kanit border-b-2 border-b-red-400 dark:border-b-indigo-500 transition-transform duration-300 group-hover:scale-110">
+                <div className="relative -z-10 hover:z-0 text-xl md:text-2xl font-kanit border-b-2 border-b-red-400 dark:border-b-indigo-500 transition-transform duration-300 group-hover:scale-110">
                   {repo.name}
                 </div>
                 {!repo.private && (
