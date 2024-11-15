@@ -1,7 +1,7 @@
 {
   "navigation": {
     "contact": "Contact",
-    "change_language" : "Switch Language",
+    "change_language": "Switch Language",
     "items": [
       {
         "part": {
@@ -57,7 +57,7 @@
       "items": [
         "JavaScript",
         "TypeScript",
-        "SQL",
+        "PostgreSQL",
         "React",
         "Next.js",
         "Vite.js",
@@ -202,17 +202,67 @@
       "p5": "as well as access my partner Antonio's portfolio"
     }
   },
-  "github_repos" : {
-    "repos" : "Repositories",
-    "public" : "public",
-    "followers" : "Followers",
-    "following" : "Following"
+  "github_repos": {
+    "repos": "Repositories",
+    "public": "public",
+    "followers": "Followers",
+    "following": "Following"
   },
   "contact": {
     "title": "Contact me!",
     "name": "Name",
     "email": "Email",
     "message": "Message"
-}
-
+  },
+  "social_media": {
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "discord": "Discord"
+  },
+  "carousel": [
+    {
+      "title": "JavaScript",
+      "src": "/icons/javascript.svg"
+    },
+    {
+      "title": "TypeScript",
+      "src": "/icons/typescript.svg"
+    },
+    {
+      "title": "PostgreSQL",
+      "src": "/icons/postgresql.svg"
+    },
+    {
+      "title": "React",
+      "src": "/icons/react.svg"
+    },
+    {
+      "title": "Next.js",
+      "src": "/icons/nextdotjs.svg"
+    },
+    {
+      "title": "Vite.js",
+      "src": "/icons/vite.svg"
+    },
+    {
+      "title": "Express",
+      "src": "/icons/express.svg"
+    },
+    {
+      "title": "Node.JS",
+      "src": "/icons/nodedotjs.svg"
+    },
+    {
+      "title": "HTML5",
+      "src": "/icons/html5.svg"
+    },
+    {
+      "title": "CSS3",
+      "src": "/icons/css3.svg"
+    },
+    {
+      "title": "TailwindCSS",
+      "src": "/icons/tailwindcss.svg"
+    }
+  ]
 }

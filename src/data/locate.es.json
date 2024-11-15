@@ -1,7 +1,7 @@
 {
   "navigation": {
     "contact": "Contacto",
-    "change_language" : "Cambiar idioma",
+    "change_language": "Cambiar idioma",
     "items": [
       {
         "part": {
@@ -58,7 +58,7 @@
       "items": [
         "JavaScript",
         "TypeScript",
-        "SQL",
+        "PostgreSQL",
         "React",
         "Next.js",
         "Vite.js",
@@ -194,25 +194,76 @@
         }
       }
     ],
-    "final" : {
-      "p1" : "Podeis acceder a la pagina completa haciendo click",
-      "p2" : "aquí",
-      "p3" : "y navegar a través de ella, la pagina cuenta con todas las rutas que tenia la original, mas alguna adicional que decidimos implementar para complementar la información que brindan en Instagram sobre el festival.",
-      "link1" : "https://aqua-reloaded.vercel.app",
-      "p4" : "También podeis acceder a la pagina web oficial del festival haciendo click",
-      "p5" : "así como acceder al Portfolio de mi compañero Antonio"
+    "final": {
+      "p1": "Podeis acceder a la pagina completa haciendo click",
+      "p2": "aquí",
+      "p3": "y navegar a través de ella, la pagina cuenta con todas las rutas que tenia la original, mas alguna adicional que decidimos implementar para complementar la información que brindan en Instagram sobre el festival.",
+      "link1": "https://aqua-reloaded.vercel.app",
+      "p4": "También podeis acceder a la pagina web oficial del festival haciendo click",
+      "p5": "así como acceder al Portfolio de mi compañero Antonio"
     }
   },
-  "github_repos" : {
-    "repos" : "Repositorios",
-    "public" : "publico",
-    "followers" : "Seguidores",
-    "following" : "Siguiendo"
+  "github_repos": {
+    "repos": "Repositorios",
+    "public": "publico",
+    "followers": "Seguidores",
+    "following": "Siguiendo"
   },
-  "contact" : {
-    "title" : "Contactame!",
-    "name" : "Nombre",
-    "email" : "Correo Electronico",
-    "message" : "Mensaje"
-  }
+  "contact": {
+    "title": "Contactame!",
+    "name": "Nombre",
+    "email": "Correo Electronico",
+    "message": "Mensaje"
+  },
+  "social_media": {
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "discord": "Discord"
+  },
+  "carousel": [
+    {
+      "title": "JavaScript",
+      "src": "/icons/javascript.svg"
+    },
+    {
+      "title": "TypeScript",
+      "src": "/icons/typescript.svg"
+    },
+    {
+      "title": "PostgreSQL",
+      "src": "/icons/postgresql.svg"
+    },
+    {
+      "title" : "React",
+      "src": "/icons/react.svg"
+    },
+    {
+      "title" : "Next.js",
+      "src" : "/icons/nextdotjs.svg"
+    },
+    {
+      "title" : "Vite.js",
+      "src" : "/icons/vite.svg"
+    },
+    {
+      "title": "Express",
+      "src" : "/icons/express.svg"
+    },
+    {
+      "title" : "Node.JS",
+      "src" : "/icons/nodedotjs.svg"
+    },
+    {
+      "title" : "HTML5",
+      "src" : "/icons/html5.svg"
+    },
+    {
+      "title" : "CSS3",
+      "src" : "/icons/css3.svg"
+    },
+    {
+      "title" : "TailwindCSS",
+      "src" : "/icons/tailwindcss.svg"
+    }
+  ]
 }

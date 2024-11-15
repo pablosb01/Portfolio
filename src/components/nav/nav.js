@@ -38,9 +38,7 @@ export default function LeftNav() {
 
   return (
     <div className="sticky top-0 h-[100vh] flex-row hidden lg:flex">
-      {/* Contenedor principal que se expande en el hover */}
       <div className="group w-10 hover:w-80 h-full flex flex-row-reverse border-r-2 border-black dark:border-gray-600 transition-all duration-300 bg-zinc-400 dark:bg-zinc-800 overflow-hidden">
-        {/* SVG o texto siempre visible */}
         <div className="flex items-center justify-center w-10 h-full">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -55,7 +53,6 @@ export default function LeftNav() {
           </svg>
         </div>
 
-        {/* Contenido que se muestra al hacer hover */}
         <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-[200ms] group-hover:duration-[600ms] ease-linear group-hover:ease-in flex flex-col h-full w-full pl-4">
           <div className="relative w-fit h-fit p-2 flex flex-col gap-5 items-center">
             <div className="group relative flex justify-center h-48 items-center">

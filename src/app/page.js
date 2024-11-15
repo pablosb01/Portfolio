@@ -5,7 +5,7 @@ import ParaText from "@/components/ParaText/ParaText";
 import { useLocalization } from "../app/context/LocalizationContext.js";
 import GitRepos from "@/components/GitRepos/GitRepos.js";
 import { motion } from "framer-motion";
-
+import CarouselInfinite from "@/components/CarouselInfinite/CarouselInfinite.js";
 
 export default function Dev() {
   const { localizationData } = useLocalization();
@@ -88,6 +88,16 @@ export default function Dev() {
           </div>
         </motion.div>
 
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          variants={fadeInUp}
+          viewport={{ once: true, amount: 0.2 }}
+          className="w-full grid"
+        >
+          <CarouselInfinite icons={localizationData.carousel} />
+        </motion.div>
+
         <motion.section
           className="bg-zinc-400 dark:bg-zinc-600 rounded-xl flex flex-col border-2 border-zinc-500 dark:border-zinc-700 p-4"
           initial="hidden"
@@ -112,8 +122,6 @@ export default function Dev() {
       </div>
 
       <GitRepos />
-
-
     </>
   );
 }
