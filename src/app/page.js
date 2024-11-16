@@ -29,14 +29,14 @@ export default function Dev() {
         </motion.div>
 
         <motion.div
-          className="flex flex-row 2xl:flex-row gap-8 w-full justify-around"
+          className="flex flex-col lg:flex-row 2xl:flex-row gap-8 w-full justify-around"
           initial="hidden"
           whileInView="visible"
           variants={fadeInUp}
           viewport={{ once: true, amount: 0.2 }}
         >
           <div className="flex flex-col 2xl:flex-row items-center gap-8">
-            <div className="flex flex-row items-center gap-8">
+            <div className="flex flex-col md:flex-row items-center gap-8">
               <Image
                 src="/cara.png"
                 width={200}
@@ -48,7 +48,7 @@ export default function Dev() {
                 className="flex-grow hidden lg:relative"
               />
             </div>
-            <div className="flex flex-row gap-6 justify-around">
+            <div className="flex flex-col md:flex-row gap-6 justify-around">
               <motion.div
                 className="flex flex-col md:flex-row justify-around gap-10"
                 initial="hidden"

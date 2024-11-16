@@ -33,7 +33,7 @@ export default function GitProfile({ user, repos }) {
       animate={sectionAnimation}
       variants={animationSettings}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="bg-zinc-400 dark:bg-zinc-600 rounded-xl flex flex-col border-2 border-zinc-500 dark:border-zinc-700"
+      className=" bg-zinc-400 dark:bg-zinc-600 rounded-xl flex flex-col border-2 border-zinc-500 dark:border-zinc-700"
     >
       <section className="flex flex-row p-4 gap-8 justify-between w-full">
         <div className="flex flex-row gap-8 space-between">
@@ -130,10 +130,10 @@ export default function GitProfile({ user, repos }) {
               href={repo.html_url}
               target="_blank"
               key={index}
-              className="group flex flex-col flex-grow basis-200 gap-4 p-4 border-b-2 border-zinc-400 hover:border-zinc-200 dark:border-zinc-600 dark:hover:border-zinc-400 shadow-lg bg-zinc-400 dark:bg-zinc-600 rounded-xl min-w-64 transition-colors duration-300"
+              className="group flex flex-col flex-grow basis-200 gap-4 p-4 border-b-2 border-zinc-400 hover:border-zinc-200 dark:border-zinc-600 dark:hover:border-zinc-400 shadow-lg bg-zinc-400 dark:bg-zinc-600 rounded-xl min-w-64 transition-all duration-300"
             >
               <div className="flex flex-row justify-between items-center gap-4">
-                <div className="relative -z-10 hover:z-0 text-xl md:text-2xl font-kanit border-b-2 border-b-red-400 dark:border-b-indigo-500 transition-transform duration-300 group-hover:scale-110">
+                <div className="text-xl md:text-2xl font-kanit border-b-2 border-b-red-400 dark:border-b-indigo-500 transition-transform duration-300 group-hover:scale-110">
                   {repo.name}
                 </div>
                 {!repo.private && (
