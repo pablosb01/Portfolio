@@ -43,7 +43,6 @@ export default function GitRepos() {
   if (loading) {
     return (
       <div role="status" className="w-full  h-full flex justify-center items-center">
-
         <svg
           aria-hidden="true"
           className="w-16 h-16 text-gray-200 animate-spin dark:text-gray-600 dark:fill-indigo-600 fill-red-400"

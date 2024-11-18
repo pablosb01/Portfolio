@@ -52,6 +52,7 @@
 
   "home": {
     "about_me": "Sobre mí",
+    "name" : "Pablo Díaz Cardín",
     "about_text": "Soy un desarrollador web FullStack con formación en DevelHope, donde adquirí una sólida base en tecnologías como JavaScript, React y Express. Tengo experiencia en el desarrollo de aplicaciones web y el trabajo en equipo, aplicando metodologías ágiles como Scrum y gestionando proyectos con Git. Me considero una persona proactiva, con habilidades para resolver problemas y adaptarme a situaciones bajo presión.",
     "skills": {
       "title": "Aptitudes",

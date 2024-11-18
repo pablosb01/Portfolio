@@ -1,24 +1,11 @@
-"use client"; // Para Next.js 13 si usas app directory
+"use client";
+
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import { EB_Garamond } from "next/font/google";
-import { Cutive_Mono } from "next/font/google";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
 import ContactButton from "../ContactButton/ContactButton";
-import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
 import { useLocalization } from "../../app/context/LocalizationContext";
 import LinkNav from "../LinkNav/LinkNav";
-
-const garamond = EB_Garamond({
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const cutive = Cutive_Mono({
-  weight: "400",
-  subsets: ["latin"],
-  display: "swap",
-});
 
 export default function HamburgerMenu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,43 +14,31 @@ export default function HamburgerMenu() {
   const { localizationData } = useLocalization();
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme) {
-      setTheme(savedTheme);
-      document.documentElement.classList.add(savedTheme);
-    } else {
-      setTheme("light");
-      document.documentElement.classList.add("light");
-    }
+    const savedTheme = localStorage.getItem("theme") || "light";
+    setTheme(savedTheme);
+    document.documentElement.classList.add(savedTheme);
   }, []);
 
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
-    document.documentElement.classList.remove(theme);
-    document.documentElement.classList.add(newTheme);
+    document.documentElement.classList.replace(theme, newTheme);
     localStorage.setItem("theme", newTheme);
     setTheme(newTheme);
   };
 
-  const toggleMenu = () => {
-    if (isOpen === true) {
-      setIsOpen(false);
-    } else {
-      setIsOpen(true);
-    }
-  };
+  const toggleMenu = () => setIsOpen(!isOpen);
 
-  const handleClickOutside = (event) => {
-    if (menuRef.current && !menuRef.current.contains(event.target)) {
-      setIsOpen(false);
-    }
-  };
+  const closeMenu = () => setIsOpen(false);
 
   useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        closeMenu();
+      }
     };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   return (
@@ -99,9 +74,15 @@ export default function HamburgerMenu() {
       >
         <nav className="flex flex-col h-full bg-gradient-to-b from-red-300 to-red-600 dark:bg-gradient-to-t dark:from-zinc-800 dark:to-indigo-800 border-r-2 border-black dark:border-gray-600">
           <div className="h-full pl-4 flex flex-col justify-around">
-            <img src="/yoliteral.png" className="w-36 h-36 self-center pr-4 shadow2" />
-            <div className="flex mx-auto p-4">
-              <ContactButton text={localizationData.navigation.contact}/>
+            <Link href="/" className='w-36 h-36 self-center pr-4 shadow2' onClick={closeMenu}>
+              <img
+                src="/yoliteral.png"
+                alt="Logo"
+                className=""
+              />
+            </Link>
+            <div className="flex mx-auto p-4" onClick={closeMenu}>
+              <ContactButton text={localizationData.navigation.contact} />
             </div>
 
             {localizationData.navigation.items.map((item, index) => (
@@ -115,20 +96,17 @@ export default function HamburgerMenu() {
                   </h1>
 
                   {item.part.items.map((section, subIndex) => (
-                    <div key={subIndex}>
+                    <div key={subIndex} onClick={closeMenu}>
                       {section.url && section.url[0] === "h" ? (
-                        <div className='pr-3'>
-                          <a
-                            href={section.url}
-                            target={section.target}
-                            rel="noopener noreferrer"
-                            className="font-cutive text-2xl hover:font-bold text-black dark:text-gray-300 dark:hover:text-violet-400 transition-colors duration-300 hover:cursor-pointer"
-                          >
-                            {section.title}
-                          </a>
+                        <div className="pr-3">
+                          <Link href={section.url}>
+                            <div className="font-cutive text-2xl hover:font-bold text-black dark:text-gray-300 dark:hover:text-violet-400 transition-colors duration-300">
+                              {section.title}
+                            </div>
+                          </Link>
                         </div>
                       ) : (
-                        <div className='pr-3'>
+                        <div className="pr-3">
                           <LinkNav href={section.url} text={section.title} />
                         </div>
                       )}

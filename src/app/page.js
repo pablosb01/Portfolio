@@ -43,10 +43,13 @@ export default function Dev() {
                 height={200}
                 className="bg-red-400 dark:bg-indigo-500 rounded-xl shadow-lg flex-shrink-0"
               />
-              <ParaText
-                text={localizationData.home.about_text}
-                className="flex-grow hidden lg:relative"
-              />
+              <div className="flex flex-col gap-4">
+                <h1 className='text-6xl font-bold font-kanit border-b-2 border-b-red-400 dark:border-b-indigo-500 w-fit '>{localizationData.home.name}</h1>
+                <ParaText
+                  text={localizationData.home.about_text}
+                  className="flex-grow hidden lg:relative"
+                />
+              </div>
             </div>
             <div className="flex flex-col md:flex-row gap-6 justify-around">
               <motion.div
@@ -121,7 +124,14 @@ export default function Dev() {
         </motion.section>
       </div>
 
-      <GitRepos />
+      <motion.section
+        initial="hidden"
+        whileInView="visible"
+        variants={fadeInUp}
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <GitRepos />
+      </motion.section>
     </>
   );
 }

@@ -3,36 +3,15 @@ import TitleText from "../TitleText/TitleText";
 import { useLocalization } from "@/app/context/LocalizationContext";
 import Follow from "../Follow/Follow";
 import { useEffect, useRef } from "react";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+
 
 export default function GitProfile({ user, repos }) {
   const { localizationData } = useLocalization();
 
-  const animationSettings = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0 },
-  };
 
-  const sectionAnimation = useAnimation();
-  const { ref: sectionRef, inView: sectionInView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-
-  useEffect(() => {
-    if (sectionInView) {
-      sectionAnimation.start("visible");
-    }
-  }, [sectionInView, sectionAnimation]);
 
   return (
-    <motion.div
-      ref={sectionRef}
-      initial="hidden"
-      animate={sectionAnimation}
-      variants={animationSettings}
-      transition={{ duration: 0.6, ease: "easeOut" }}
+    <div
       className=" bg-zinc-400 dark:bg-zinc-600 rounded-xl flex flex-col border-2 border-zinc-500 dark:border-zinc-700"
     >
       <section className="flex flex-row p-4 gap-8 justify-between w-full">
@@ -148,6 +127,6 @@ export default function GitProfile({ user, repos }) {
           ))}
         </div>
       </section>
-    </motion.div>
+    </div>
   );
 }
