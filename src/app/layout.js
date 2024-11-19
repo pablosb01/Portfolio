@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
           <div className="h-full flex-row hidden lg:flex">
             <LeftNav />
             <div className="min-h-screen w-full flex flex-col">
-              <div className="h-fit w-full flex justify-center p-10 border-b-2 border-black dark:border-gray-600 bg-zinc-400 dark:bg-zinc-800 transition-colors duration-300">
+              <div className="h-fit w-full flex justify-start p-5 transition-colors duration-300">
                 <Banner />
               </div>
               {children}

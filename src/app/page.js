@@ -6,6 +6,7 @@ import { useLocalization } from "../app/context/LocalizationContext.js";
 import GitRepos from "@/components/GitRepos/GitRepos.js";
 import { motion } from "framer-motion";
 import CarouselInfinite from "@/components/CarouselInfinite/CarouselInfinite.js";
+import ContactButton from "@/components/ContactButton/ContactButton.js";
 
 export default function Dev() {
   const { localizationData } = useLocalization();
@@ -17,19 +18,23 @@ export default function Dev() {
   };
 
   return (
-    <>
-      <div className="m-12 flex flex-col gap-8 -z-10">
+    <div className="">
+      <div className="py-12 px-12 dark:bg-[url('/back1.jpg')] bg-cover bg-center flex flex-col gap-8 -z-10">
         <motion.div
           initial="hidden"
           whileInView="visible"
           variants={fadeInUp}
           viewport={{ once: true, amount: 0.2 }}
+          className="flex flex-row justify-between items-center px-4"
         >
-          <TitleText text={localizationData.home.about_me} />
+          <h1 className="text-8xl font-bold font-kanit border-b-2 border-b-red-400 dark:border-b-indigo-500 w-fit ">
+            {localizationData.home.name}
+          </h1>
+          <ContactButton text={localizationData.navigation.contact} />
         </motion.div>
 
         <motion.div
-          className="flex flex-col lg:flex-row 2xl:flex-row gap-8 w-full justify-around"
+          className="flex flex-col lg:flex-row 2xl:flex-row bg-zinc-600 rounded-xl bg-opacity-80 p-4 gap-8 w-full justify-around"
           initial="hidden"
           whileInView="visible"
           variants={fadeInUp}
@@ -43,10 +48,10 @@ export default function Dev() {
                 height={200}
                 className="bg-red-400 dark:bg-indigo-500 rounded-xl shadow-lg flex-shrink-0"
               />
-          
+
               <div className="flex flex-col gap-4">
                 <h1 className="text-6xl font-bold font-kanit border-b-2 border-b-red-400 dark:border-b-indigo-500 w-fit ">
-                  {localizationData.home.name}
+                  Quien soy yo?
                 </h1>
                 <ParaText
                   text={localizationData.home.about_text}
@@ -105,7 +110,7 @@ export default function Dev() {
         </motion.div>
 
         <motion.section
-          className="bg-zinc-400 dark:bg-zinc-600 rounded-xl flex flex-col border-2 border-zinc-500 dark:border-zinc-700 p-4"
+          className="bg-zinc-400 dark:bg-opacity-80 dark:bg-zinc-600 rounded-xl flex flex-col border-zinc-500 p-4"
           initial="hidden"
           whileInView="visible"
           variants={fadeInUp}
@@ -139,7 +144,6 @@ export default function Dev() {
       <motion.section>
         <p>niga</p>
       </motion.section>
-
-    </>
+    </div>
   );
 }
