@@ -10,9 +10,7 @@ export default function Banner() {
 
   return (
     <div className="flex flex-row items-center">
-      <div
-        className="relative z-10 transition-transform duration-300 ease-in-out shadow2"
-      >
+      <div className="flex flex-row relative z-10 transition-transform duration-300 ease-in-out shadow2">
         <Image
           src="/diazlogoclean2.png"
           alt="Ddev Logo"

@@ -64,7 +64,7 @@ export default function GitRepos() {
   }
 
   return (
-    <div className='p-4' id='#gitrepos'>
+    <div className='' id='#gitrepos'>
       <GitProfile user={user} repos={repos} />
     </div>
   );

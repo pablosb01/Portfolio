@@ -43,8 +43,11 @@ export default function Dev() {
                 height={200}
                 className="bg-red-400 dark:bg-indigo-500 rounded-xl shadow-lg flex-shrink-0"
               />
+          
               <div className="flex flex-col gap-4">
-                <h1 className='text-6xl font-bold font-kanit border-b-2 border-b-red-400 dark:border-b-indigo-500 w-fit '>{localizationData.home.name}</h1>
+                <h1 className="text-6xl font-bold font-kanit border-b-2 border-b-red-400 dark:border-b-indigo-500 w-fit ">
+                  {localizationData.home.name}
+                </h1>
                 <ParaText
                   text={localizationData.home.about_text}
                   className="flex-grow hidden lg:relative"
@@ -132,6 +135,11 @@ export default function Dev() {
       >
         <GitRepos />
       </motion.section>
+
+      <motion.section>
+        <p>niga</p>
+      </motion.section>
+
     </>
   );
 }

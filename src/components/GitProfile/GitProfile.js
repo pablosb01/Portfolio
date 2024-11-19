@@ -12,7 +12,7 @@ export default function GitProfile({ user, repos }) {
 
   return (
     <div
-      className=" bg-zinc-400 dark:bg-zinc-600 rounded-xl flex flex-col border-2 border-zinc-500 dark:border-zinc-700"
+      className=" bg-zinc-400 dark:bg-zinc-600 flex flex-col "
     >
       <section className="flex flex-row p-4 gap-8 justify-between w-full">
         <div className="flex flex-row gap-8 space-between">
@@ -101,7 +101,7 @@ export default function GitProfile({ user, repos }) {
         </div>
       </section>
 
-      <section className="bg-zinc-300 dark:bg-zinc-500 rounded-xl flex flex-col p-4">
+      <section className="bg-zinc-300 dark:bg-zinc-500 flex border-2 flex-col p-4">
         <TitleText text={localizationData.github_repos.repos} />
         <div className="flex flex-wrap p-4 gap-4">
           {repos.map((repo, index) => (
