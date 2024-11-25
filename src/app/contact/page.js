@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useLocalization } from "../../app/context/LocalizationContext";
+import { Link } from "lucide-react";
 
 const ContactForm = () => {
   const { localizationData } = useLocalization();
@@ -50,12 +51,29 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="h-full flex justify-center items-center">
+    <div className="h-full flex flex-col justify-center items-center p-10">
+      <div className="w-[50%] flex justify-end p-4">
+        <a href="/" className="block w-fit shadow2">
+          <div className="flex items-center gap-4 justify-start px-4 py-2 text-left font-medium bg-red-400 hover:bg-red-600 dark:bg-indigo-500 dark:hover:bg-indigo-600 text-white border border-gray-600 hover:border-gray-500 rounded-md transition-colors duration-200">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20px"
+              height="20px"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="text-black dark:text-white"
+            >
+              <path d="M4 10L3.29289 10.7071L2.58579 10L3.29289 9.29289L4 10ZM21 18C21 18.5523 20.5523 19 20 19C19.4477 19 19 18.5523 19 18L21 18ZM8.29289 15.7071L3.29289 10.7071L4.70711 9.29289L9.70711 14.2929L8.29289 15.7071ZM3.29289 9.29289L8.29289 4.29289L9.70711 5.70711L4.70711 10.7071L3.29289 9.29289ZM4 9L14 9L14 11L4 11L4 9ZM21 16L21 18L19 18L19 16L21 16ZM14 9C17.866 9 21 12.134 21 16L19 16C19 13.2386 16.7614 11 14 11L14 9Z" />
+            </svg>
+            <h2 className='text-xl'>{localizationData.navigation.back}</h2>
+          </div>
+        </a>
+      </div>
       <motion.div
         className="max-w-[50%] w-full min-w-[16rem] mx-auto my-4 bg-white dark:bg-zinc-300 shadow-lg rounded-md p-8"
-        initial={{ opacity: 0, y: 50 }}  // Inicializa con opacidad 0 y desplazado hacia abajo
-        animate={{ opacity: 1, y: 0 }}   // Cuando entra en vista, muestra con opacidad 1 y sin desplazamiento
-        transition={{ duration: 0.8 }}    // Duración de la animación
+        initial={{ opacity: 0, y: 50 }} // Inicializa con opacidad 0 y desplazado hacia abajo
+        animate={{ opacity: 1, y: 0 }} // Cuando entra en vista, muestra con opacidad 1 y sin desplazamiento
+        transition={{ duration: 0.8 }} // Duración de la animación
       >
         <h2
           className={`font-kanit text-4xl font-bold mb-6 text-gray-800 text-center`}

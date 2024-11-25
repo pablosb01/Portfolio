@@ -9,7 +9,7 @@ export default function Banner() {
   const { localizationData } = useLocalization();
 
   return (
-    <div className="flex flex-row">
+    <div className="flex flex-row justify-between w-full">
       <div className="flex flex-row relative z-10 transition-transform duration-300 ease-in-out shadow2">
         <Image
           src="/diazlogoclean2.png"
@@ -19,10 +19,10 @@ export default function Banner() {
         />
       </div>
 
-      {/* <div className="absolute right-0 p-4 flex flex-col items-center justify-center rounded-lg shadow2 text-center bg-zinc-200 dark:bg-zinc-600 m-6">
-        <p>{localizationData.navigation.change_language}</p>
+      <div className="flex flex-col  items-center justify-center rounded-lg shadow2 text-center">
+        
         <LanguageSwitcher />
-      </div> */}
+      </div>
     </div>
   );
 }

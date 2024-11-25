@@ -1,6 +1,7 @@
 {
   "navigation": {
     "contact": "Contact",
+    "back" : "Back",
     "change_language": "Switch Language",
     "items": [
       {
@@ -51,7 +52,8 @@
   },
   "home": {
     "about_me": "About me",
-    "name" : "Pablo Díaz Cardín",
+    "name": "Pablo Díaz Cardín",
+    "question": "Who I am?",
     "about_text": "I am a FullStack web developer with training from DevelHope, where I acquired a solid foundation in technologies such as JavaScript, React, and Express. I have experience in web application development and teamwork, applying agile methodologies like Scrum and managing projects with Git. I consider myself a proactive person, with skills to solve problems and adapt to situations under pressure.",
     "skills": {
       "title": "Skills",
@@ -265,5 +267,28 @@
       "title": "TailwindCSS",
       "src": "/icons/tailwindcss.svg"
     }
-  ]
+  ],
+  "projects_section": {
+    "title" : "Projects",
+    "projects" : [
+      {
+        "id": "nintendo_clone",
+        "title": "Nintendo Clone",
+        "src": "/nintendo",
+        "img": "/nintendo/charactersnintendo.png"
+      },
+      {
+        "id": "score_tracker",
+        "title": "Score Tracker",
+        "src": "/score",
+        "img": "/score/scorehome.png"
+      },
+      {
+        "id": "aqua_reloaded",
+        "title": "AquaReloaded",
+        "src": "/aqs",
+        "img": "/aqs/aquahome.png"
+      }
+    ]
+  }
 }

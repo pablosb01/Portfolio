@@ -7,6 +7,9 @@ import GitRepos from "@/components/GitRepos/GitRepos.js";
 import { motion } from "framer-motion";
 import CarouselInfinite from "@/components/CarouselInfinite/CarouselInfinite.js";
 import ContactButton from "@/components/ContactButton/ContactButton.js";
+import Project from "@/components/ProjectComp/ProjectComp.js";
+import ProjectComp from "@/components/ProjectComp/ProjectComp.js";
+import Link from "next/link.js";
 
 export default function Dev() {
   const { localizationData } = useLocalization();
@@ -19,7 +22,7 @@ export default function Dev() {
 
   return (
     <div className="">
-      <div className="py-12 px-12 dark:bg-[url('/back1.jpg')] bg-cover bg-center flex flex-col gap-8 -z-10">
+      <div className="py-12 px-12 flex flex-col gap-8 -z-10">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -34,7 +37,7 @@ export default function Dev() {
         </motion.div>
 
         <motion.div
-          className="flex flex-col lg:flex-row 2xl:flex-row bg-zinc-600 rounded-xl bg-opacity-80 p-4 gap-8 w-full justify-around"
+          className="flex flex-col lg:flex-row 2xl:flex-row bg-zinc-300 dark:bg-zinc-600 rounded-xl dark:bg-opacity-80 bg-opacity-80 p-4 gap-8 w-full justify-around"
           initial="hidden"
           whileInView="visible"
           variants={fadeInUp}
@@ -46,12 +49,12 @@ export default function Dev() {
                 src="/cara.png"
                 width={200}
                 height={200}
-                className="bg-red-400 dark:bg-indigo-500 rounded-xl shadow-lg flex-shrink-0"
+                className="bg-zinc-300 bg-opacity-80 dark:bg-indigo-500 rounded-xl shadow-lg flex-shrink-0"
               />
 
               <div className="flex flex-col gap-4">
                 <h1 className="text-6xl font-bold font-kanit border-b-2 border-b-red-400 dark:border-b-indigo-500 w-fit ">
-                  Quien soy yo?
+                  {localizationData.home.question}
                 </h1>
                 <ParaText
                   text={localizationData.home.about_text}
@@ -110,7 +113,7 @@ export default function Dev() {
         </motion.div>
 
         <motion.section
-          className="bg-zinc-400 dark:bg-opacity-80 dark:bg-zinc-600 rounded-xl flex flex-col border-zinc-500 p-4"
+          className="bg-zinc-300 dark:bg-opacity-80 dark:bg-zinc-600 bg-opacity-80 rounded-xl flex flex-col border-zinc-500 p-4"
           initial="hidden"
           whileInView="visible"
           variants={fadeInUp}
@@ -137,13 +140,32 @@ export default function Dev() {
         whileInView="visible"
         variants={fadeInUp}
         viewport={{ once: true, amount: 0.2 }}
+        className="p-4"
       >
         <GitRepos />
       </motion.section>
 
-      <motion.section>
-        <p>niga</p>
-      </motion.section>
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        variants={fadeInUp}
+        viewport={{ once: true, amount: 0.2 }}
+        className="m-4 p-4 bg-zinc-300 dark:bg-opacity-80 bg-opacity-80 dark:bg-zinc-600 rounded-xl"
+      >
+        <h1 className="font-kanit text-4xl border-b-2 border-b-red-400 dark:border-b-indigo-500">
+          {localizationData.projects_section.title}
+        </h1>
+
+        <div className="flex flex-grow gap-4 p-4">
+          {localizationData.projects_section.projects.map((project, i) => (
+            <Link href={project.src} key={i} className="w-full">
+              <div className="group transition-transform duration-300 hover:scale-110">
+                <ProjectComp index={i} p={project} className="w-full" />
+              </div>
+            </Link>
+          ))}
+        </div>
+      </motion.div>
     </div>
   );
 }

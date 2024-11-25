@@ -15,7 +15,7 @@ export default function Aqs() {
 
   return (
     <>
-      <div className="m-12">
+      <div className="m-8 p-4 bg-zinc-300 dark:bg-opacity-60 bg-opacity-80 dark:bg-zinc-600 rounded-xl">
         <motion.h1
           className="font-kanit text-4xl border-b-2 border-b-red-400 dark:border-b-indigo-500"
           initial="hidden"

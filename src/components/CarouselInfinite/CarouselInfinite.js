@@ -1,7 +1,7 @@
 export default function CarouselInfinite({ icons }) {
     
   return (
-    <div className="relative overflow-hidden w-[80%] h-30 justify-self-center bg-zinc-400 dark:bg-opacity-0 p-4 rounded-lg border-2 border-zinc-600 dark:border-0 z-0">
+    <div className="relative overflow-hidden w-[80%] h-30 justify-self-center dark:bg-opacity-0 p-4 rounded-lg z-0">
       <div className="flex w-max animate-scroll">
         {icons.map((icon, index) => (
             

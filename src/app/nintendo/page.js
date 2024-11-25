@@ -2,6 +2,7 @@
 import ScreenShotComp from "@/components/ScreenShotComp/ScreenShotComp";
 import { useLocalization } from "../context/LocalizationContext";
 import { motion } from "framer-motion";
+import TitleText from "@/components/TitleText/TitleText";
 
 export default function Nintendo() {
   const { localizationData } = useLocalization();
@@ -14,7 +15,7 @@ export default function Nintendo() {
 
   return (
     <>
-      <div className="m-12">
+      <div className="m-8 p-4 bg-zinc-300 dark:bg-opacity-60 bg-opacity-80 dark:bg-zinc-600 rounded-xl">
         <motion.h1
           className="font-kanit text-4xl border-b-2 border-b-red-400 dark:border-b-indigo-500"
           initial="hidden"
@@ -50,7 +51,9 @@ export default function Nintendo() {
               variants={fadeInUp}
               viewport={{ once: true, amount: 0.2 }}
             >
-              <h1 className="font-kanit text-3xl">{section.title}</h1>
+              <div className="w-fit">
+                <TitleText text={section.title} />
+              </div>
 
               <div className="my-3 flex flex-col">
                 {section.description &&

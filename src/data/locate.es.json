@@ -1,6 +1,7 @@
 {
   "navigation": {
     "contact": "Contacto",
+    "back" : "Volver",
     "change_language": "Cambiar idioma",
     "items": [
       {
@@ -53,6 +54,7 @@
   "home": {
     "about_me": "Sobre mí",
     "name" : "Pablo Díaz Cardín",
+    "question" : "¿Quién es Pablo?",
     "about_text": "Soy un desarrollador web FullStack con formación en DevelHope, donde adquirí una sólida base en tecnologías como JavaScript, React y Express. Tengo experiencia en el desarrollo de aplicaciones web y el trabajo en equipo, aplicando metodologías ágiles como Scrum y gestionando proyectos con Git. Me considero una persona proactiva, con habilidades para resolver problemas y adaptarme a situaciones bajo presión.",
     "skills": {
       "title": "Aptitudes",
@@ -266,5 +268,28 @@
       "title" : "TailwindCSS",
       "src" : "/icons/tailwindcss.svg"
     }
-  ]
+  ],
+  "projects_section": {
+    "title": "Proyectos",
+    "projects" : [
+      {
+        "id": "nintendo_clone",
+        "title": "Nintendo Clone",
+        "src": "/nintendo",
+        "img": "/nintendo/charactersnintendo.png"
+      },
+      {
+        "id": "score_tracker",
+        "title": "Score Tracker",
+        "src": "/score",
+        "img": "/score/scorehome.png"
+      },
+      {
+        "id": "aqua_reloaded",
+        "title": "AquaReloaded",
+        "src": "/aqs",
+        "img": "/aqs/aquahome.png"
+      }
+    ]
+  }
 }

@@ -38,7 +38,7 @@ export default function LeftNav() {
 
   return (
     <div className="sticky top-0 h-[100vh] flex-row hidden lg:flex">
-      <div className="group w-10 hover:w-80 h-full flex flex-row-reverse border-r-2 border-black dark:border-gray-600 transition-all duration-300 bg-zinc-400 dark:bg-zinc-800 overflow-hidden">
+      <div className="group w-10 hover:w-80 h-full flex flex-row-reverse border-r-2 rounded-br-3xl border-black dark:border-gray-600 transition-all duration-300 bg-zinc-400 dark:bg-zinc-800 overflow-hidden">
         <div className="flex items-center justify-center w-10 h-full">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +61,6 @@ export default function LeftNav() {
               </div>
               <ImageNavbar />
             </div>
-            <ContactButton text={localizationData.navigation.contact} />
           </div>
 
           {localizationData.navigation.items.map((item, index) => (
